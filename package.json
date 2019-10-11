@@ -7,7 +7,10 @@
     "start": "rollup -c -w"
   },
   "dependencies": {
-    "mf-styling": "arlac77/mf-styling"
+    "mf-styling": "arlac77/mf-styling",
+    "svelte-guard-history-router": "^1.1.5",
+    "svelte-common": "arlac77/svelte-common",
+    "svelte-session-manager": "^1.0.2"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.7",
