@@ -35,14 +35,14 @@
   },
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
   "config": {
-    "base": "/services/entitlement-provider-frontend/",
-    "api": "/services/entitlement-provider-frontend/api",
-    "proxyTarget": "https://somewhere/"
+    "base": "/services/entitlements/",
+    "api": "/services/entitlements/api",
+    "proxyTarget": "https://mfelten.dynv6.net/"
   },
   "pacman": {
     "groups": "{{group}}",
     "hooks": "pacman/install.sh",
-    "installdir": "/services/entitlement-provider-frontend/frontend",
+    "installdir": "/services/entitlements/frontend",
     "content": {
       "${installdir}/": {
         "base": "public"
