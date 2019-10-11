@@ -1,5 +1,6 @@
 import { Router, route, NotFound, Guard } from "svelte-guard-history-router";
 import { Session } from "svelte-session-manager";
+import Home from "./pages/Home.svelte";
 import About from "./pages/About.svelte";
 import Login from "./pages/Login.svelte";
 import App from "./App.svelte";
