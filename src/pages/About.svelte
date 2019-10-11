@@ -22,10 +22,6 @@
         <td>{config.api}</td>
       </tr>
       <tr>
-        <td>Graphql API</td>
-        <td>{config.graphQl}</td>
-      </tr>
-      <tr>
         <td>Username</td>
         <td>{$session.username}</td>
       </tr>
