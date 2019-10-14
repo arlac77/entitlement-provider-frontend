@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "mf-styling": "arlac77/mf-styling",
-    "svelte-guard-history-router": "^1.1.5",
     "svelte-common": "arlac77/svelte-common",
+    "svelte-guard-history-router": "^1.1.5",
     "svelte-session-manager": "^1.0.2"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "svelte": "^3.12.1"
   },
   "engines": {
-    "node": ">=12.11.1"
+    "node": ">=12.12.0"
   },
   "repository": {
     "type": "git",
@@ -53,7 +53,7 @@
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
-      "entitlement-provider" : ">=1.0.26",
+      "entitlement-provider": ">=1.0.26",
       "systemd": ">=243.51",
       "nginx-mainline": ">=1.17.4"
     }
