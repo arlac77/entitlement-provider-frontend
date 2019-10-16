@@ -10,7 +10,7 @@
 
 <nav>
   <a href="/" use:link={router} use:active={router}>
-    <img class="logo" src="hook_ci.svg" alt="Entitlement Provider" />
+    <img class="logo" src="logo.svg" alt="Entitlement Provider" />
     Entitlement Provider
   </a>
   <ul class="left">
@@ -23,17 +23,13 @@
       {#if $session.isValid}
         <Menue>
           <div slot="title" class="dropdown-trigger">{$session.username}</div>
-          <ul slot="content" class="dropdown-content">
-            <li>
-              <a href="/" on:click|preventDefault={logout}>
-                Logout {$session.username}
-              </a>
-            </li>
-            <li class="divider" />
-            <li>
-              <a href="#!">three</a>
-            </li>
-          </ul>
+          <div slot="content" class="dropdown-menu dropdown-menu-sw">
+            <a href="/" class="dropdown-item" on:click|preventDefault={logout}>
+              Logout {$session.username}
+            </a>
+            <div class="dropdown-divider" />
+            <a href="#!" class="dropdown-item">three</a>
+          </div>
         </Menue>
       {:else}
         <a href="/login" use:link={router} use:active={router}>Login</a>
