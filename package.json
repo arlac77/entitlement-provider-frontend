@@ -2,6 +2,7 @@
   "name": "entitlement-provider-frontend",
   "version": "0.0.0-semantic-release",
   "description": "web frontend for the entitlement-provider",
+  "license": "BSD-2-Clause",
   "scripts": {
     "prepare": "rollup -c",
     "start": "rollup -c -w"
