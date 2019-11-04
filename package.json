@@ -45,7 +45,7 @@
   },
   "pacman": {
     "groups": "services",
-    "hooks": "pacman/install.sh",
+    "hooks": "pacman/hooks.sh",
     "installdir": "/services/entitlement-provider/frontend",
     "content": {
       "${installdir}/": {
