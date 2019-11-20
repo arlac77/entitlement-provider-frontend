@@ -28,7 +28,7 @@
     "svelte": "^3.14.1"
   },
   "engines": {
-    "node": ">=12.12.0"
+    "node": ">=12.13.1"
   },
   "repository": {
     "type": "git",
