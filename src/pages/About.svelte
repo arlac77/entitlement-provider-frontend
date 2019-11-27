@@ -1,7 +1,31 @@
 <script>
+  import { onMount } from "svelte";
   import { dateFormatter } from "svelte-common";
   import { name, version, description, config } from "../../package.json";
   import { session } from "../main.mjs";
+
+  onMount(() => {
+    /*
+    let url = config.api + "/ws1";
+    url = url.replace(/https?:+/, "wss:");
+*/
+
+    let url = 'wss://mfelten.dynv6.net/services/entitlements/api/ws1';
+
+//    let url = 'wss://localhost:5000/services/entitlements/api/ws1';
+
+    const socket = new WebSocket(url);
+
+    socket.onerror = event => {
+      console.log(event);
+    };
+
+    socket.onmessage = event => {
+      console.log(event.data);
+    };
+
+    socket.send("from browser");
+  });
 </script>
 
 <div>
