@@ -4,28 +4,45 @@
   import { name, version, description, config } from "../../package.json";
   import { session } from "../main.mjs";
 
-  onMount(() => {
-    /*
-    let url = config.api + "/ws1";
-    url = url.replace(/https?:+/, "wss:");
-*/
+  let uptime;
 
-    let url = 'wss://mfelten.dynv6.net/services/entitlements/api/ws1';
+let store = wsStore(
+    "wss://mfelten.dynv6.net/services/entitlements/api/ws/state/uptime"
+  );
 
-//    let url = 'wss://localhost:5000/services/entitlements/api/ws1';
+  uptime = $store;
 
-    const socket = new WebSocket(url);
+  function wsStore(url) {
+    let socket;
+    const subscriptions = new Set();
 
-    socket.onerror = event => {
-      console.log(event);
+    function open() {
+      if (socket) {
+        return;
+      }
+
+      socket = new WebSocket(url);
+
+      socket.onopen = event => {
+        socket.send("from browser");
+      };
+
+      socket.onerror = event => {
+        console.log(event);
+      };
+
+      socket.onmessage = event =>
+        subscriptions.forEach(subscription => subscription(event.data));
+    }
+
+    return {
+      subscribe(subscription) {
+        open();
+        subscriptions.add(subscription);
+        return () => subscriptions.delete(subscription);
+      }
     };
-
-    socket.onmessage = event => {
-      console.log(event.data);
-    };
-
-    socket.send("from browser");
-  });
+  }
 </script>
 
 <div>
@@ -44,6 +61,10 @@
       <tr>
         <td>API</td>
         <td>{config.api}</td>
+      </tr>
+      <tr>
+        <td>uptime</td>
+        <td>{uptime}</td>
       </tr>
       <tr>
         <td>Username</td>
