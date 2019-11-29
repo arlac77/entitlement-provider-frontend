@@ -2,47 +2,13 @@
   import { onMount } from "svelte";
   import { dateFormatter } from "svelte-common";
   import { name, version, description, config } from "../../package.json";
+  import { websocketStore } from "svelte-websocket-store";
   import { session } from "../main.mjs";
 
-  let uptime;
-
-let store = wsStore(
+  const uptime = websocketStore(
     "wss://mfelten.dynv6.net/services/entitlements/api/ws/state/uptime"
   );
 
-  uptime = $store;
-
-  function wsStore(url) {
-    let socket;
-    const subscriptions = new Set();
-
-    function open() {
-      if (socket) {
-        return;
-      }
-
-      socket = new WebSocket(url);
-
-      socket.onopen = event => {
-        socket.send("from browser");
-      };
-
-      socket.onerror = event => {
-        console.log(event);
-      };
-
-      socket.onmessage = event =>
-        subscriptions.forEach(subscription => subscription(event.data));
-    }
-
-    return {
-      subscribe(subscription) {
-        open();
-        subscriptions.add(subscription);
-        return () => subscriptions.delete(subscription);
-      }
-    };
-  }
 </script>
 
 <div>
@@ -64,7 +30,7 @@ let store = wsStore(
       </tr>
       <tr>
         <td>uptime</td>
-        <td>{uptime}</td>
+        <td>{$uptime}</td>
       </tr>
       <tr>
         <td>Username</td>
