@@ -4670,7 +4670,7 @@ svelte-session-manager@^1.0.2:
 
 "svelte-websocket-store@https://github.com/arlac77/svelte-websocket-store.git":
   version "0.0.0-semantic-release"
-  resolved "https://github.com/arlac77/svelte-websocket-store.git#34ef30c551d735cb196bec0d535ebcddd419eade"
+  resolved "https://github.com/arlac77/svelte-websocket-store.git#8eef1c6b452e4ccb5bfb3f9dffa532d5ebd8ee4b"
 
 svelte@^3.15.0:
   version "3.15.0"
