@@ -4,7 +4,7 @@ import Home from "./pages/Home.svelte";
 import About from "./pages/About.svelte";
 import Login from "./pages/Login.svelte";
 import App from "./App.svelte";
-import { config } from "../package.json";
+import base from 'consts:base';
 
 export const session = new Session(localStorage);
 
@@ -25,7 +25,7 @@ export const router = new Router(
     route("/login", Login),
     route("/about", About)
   ],
-  config.base
+  base
 );
 
 

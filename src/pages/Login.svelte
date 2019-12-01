@@ -1,7 +1,7 @@
 <script>
   import { Login } from "svelte-session-manager";
-  import { config } from "../../package.json";
   import { session } from "../main.mjs";
+  import api from 'consts:api';
 
   export let state;
 
@@ -15,5 +15,5 @@
 </script>
 
 <div class="center">
-  <Login {session} endpoint={config.api + '/authenticate'} {result} />
+  <Login {session} endpoint={api + '/authenticate'} {result} />
 </div>
