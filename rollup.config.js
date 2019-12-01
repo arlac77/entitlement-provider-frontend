@@ -24,8 +24,7 @@ export default {
       name,
       version,
       description,
-      api: config.api,
-      base: config.base
+      ...config
     }),
     copy({
       targets: [
