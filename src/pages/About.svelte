@@ -1,6 +1,5 @@
 <script>
-  import { onMount } from "svelte";
-  import { dateFormatter } from "svelte-common";
+  import { dateFormatter, formatDuration } from "svelte-common";
   import { websocketStore } from "svelte-websocket-store";
   import { session } from "../main.mjs";
   import version from 'consts:version';
@@ -33,8 +32,8 @@
         <td>{api}</td>
       </tr>
       <tr>
-        <td>uptime</td>
-        <td>{$uptime}</td>
+        <td>Uptime</td>
+        <td>{formatDuration($uptime)}</td>
       </tr>
       <tr>
         <td>Username</td>
