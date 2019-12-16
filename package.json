@@ -10,8 +10,8 @@
   "dependencies": {
     "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^1.1.2",
-    "svelte-guard-history-router": "^1.1.8",
-    "svelte-session-manager": "^1.0.2",
+    "svelte-guard-history-router": "^1.1.9",
+    "svelte-session-manager": "^1.0.3",
     "svelte-websocket-store": "https://github.com/arlac77/svelte-websocket-store.git"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
-      "entitlement-provider": ">=1.0.26",
+      "entitlement-provider": ">=2.2.61",
       "systemd": ">=244",
       "nginx-mainline": ">=1.17.4"
     }
