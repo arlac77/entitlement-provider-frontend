@@ -2,6 +2,7 @@ import { Router, route, NotFound, Guard } from "svelte-guard-history-router";
 import { Session } from "svelte-session-manager";
 import Home from "./pages/Home.svelte";
 import About from "./pages/About.svelte";
+import Entitlements from "./pages/Entitlements.svelte";
 import Login from "./pages/Login.svelte";
 import App from "./App.svelte";
 import base from 'consts:base';
@@ -23,6 +24,7 @@ export const router = new Router(
     route("*", NotFound),
     route("/*", Home),
     route("/login", Login),
+    route("/entitlements", needsSession, Entitlements),
     route("/about", About)
   ],
   base

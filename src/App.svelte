@@ -15,7 +15,7 @@
   </a>
   <ul class="left">
     <li>
-      <a href="/entitelments" use:link={router} use:active={router}>Entitelments</a>
+      <a href="/entitlements" use:link={router} use:active={router}>Entitlements</a>
     </li>
   </ul>
   <ul>
