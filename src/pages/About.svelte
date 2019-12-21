@@ -9,7 +9,7 @@
   import name from 'consts:name';
 
   const uptime = websocketStore(
-    "wss://mfelten.dynv6.net/services/entitlements/api/ws/state/uptime"
+    "wss://mfelten.dynv6.net/services/entitlements/api/state/uptime"
   );
 
 </script>
