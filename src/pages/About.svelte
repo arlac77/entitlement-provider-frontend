@@ -8,9 +8,7 @@
   import base from 'consts:base';
   import name from 'consts:name';
 
-  const uptime = websocketStore(
-    "wss://mfelten.dynv6.net/services/entitlements/api/state/uptime"
-  );
+  let uptime = websocketStore("wss://mfelten.dynv6.net/services/entitlements/api/state/uptime", -1);
 
 </script>
 
