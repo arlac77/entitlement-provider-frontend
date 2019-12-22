@@ -15,6 +15,7 @@
     "svelte-websocket-store": "https://github.com/arlac77/svelte-websocket-store.git"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@semantic-release/exec": "^3.3.8",
     "npm-pkgbuild": "^6.11.1",
