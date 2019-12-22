@@ -31,7 +31,7 @@
       </tr>
       <tr>
         <td>Uptime</td>
-        <td>{formatDuration($uptime)}</td>
+        <td>{#if $uptime < 0}down{:else}{formatDuration($uptime)}{/if}</td>
       </tr>
       <tr>
         <td>Username</td>
