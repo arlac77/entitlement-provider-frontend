@@ -9,7 +9,6 @@
   import name from 'consts:name';
 
   let uptime = websocketStore("wss://mfelten.dynv6.net/services/entitlements/api/state/uptime", -1);
-
   let memory = websocketStore("wss://mfelten.dynv6.net/services/entitlements/api/state/memory", { heapTotal: -1, heapUsed: -1, external: -1, rss: -1});
 
 </script>
@@ -36,8 +35,12 @@
         <td>{#if $uptime < 0}down{:else}{formatDuration($uptime)}{/if}</td>
       </tr>
       <tr>
-        <td>Heap Total</td>
+        <td>Server Heap Total</td>
         <td>{formatBytes($memory.heapTotal)}</td>
+      </tr>
+      <tr>
+        <td>Server Heap Used</td>
+        <td>{formatBytes($memory.heapUsed)}</td>
       </tr>
       <tr>
         <td>Username</td>
