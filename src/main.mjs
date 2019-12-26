@@ -3,6 +3,7 @@ import { Session } from "svelte-session-manager";
 import Home from "./pages/Home.svelte";
 import About from "./pages/About.svelte";
 import Entitlements from "./pages/Entitlements.svelte";
+import Services from "./pages/Services.svelte";
 import Login from "./pages/Login.svelte";
 import App from "./App.svelte";
 import base from 'consts:base';
@@ -25,6 +26,7 @@ export const router = new Router(
     route("/*", Home),
     route("/login", Login),
     route("/entitlements", needsSession, Entitlements),
+    route("/services", needsSession, Services),
     route("/about", About)
   ],
   base

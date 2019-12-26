@@ -17,6 +17,9 @@
     <li>
       <a href="/entitlements" use:link={router} use:active={router}>Entitlements</a>
     </li>
+    <li>
+      <a href="/services" use:link={router} use:active={router}>Services</a>
+    </li>
   </ul>
   <ul>
     <li>
