@@ -13,8 +13,8 @@
   <p>...fetching</p>
 {:then services}
   <ul>
-    {#each services as service}
-      <li>Service: {service.name}</li>
+    {#each Object.values(services) as service}
+      <li>{service.name} ({service.state})</li>
     {/each}
   </ul>
 {:catch error}
