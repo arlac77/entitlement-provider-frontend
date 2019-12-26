@@ -5,7 +5,7 @@
   async function fetchEntitlements() {
     return fetch(`${api}/entitlements`, {
       headers: session.authorizationHeader
-    });
+    }).then(response => response.json());
   }
 </script>
 

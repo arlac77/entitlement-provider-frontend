@@ -5,7 +5,7 @@
   async function fetchServices() {
     return fetch(`${api}/services`, {
       headers: session.authorizationHeader
-    });
+    }).then(response => response.json());
   }
 </script>
 
@@ -14,7 +14,7 @@
 {:then services}
   <ul>
     {#each services as service}
-      <li>{service.name}</li>
+      <li>Service: {service.name}</li>
     {/each}
   </ul>
 {:catch error}
