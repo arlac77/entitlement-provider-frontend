@@ -11,16 +11,28 @@
     })
       .then(response => response.json())
       .then(json => {
+        let cx = 110;
         let y = 0;
         for (const service of Object.values(json)) {
           service.x = 10;
           service.y = y;
 
-          let ey = 10 + 5;
-          for (const endpoint of Object.values(service.endpoints)) {
+          let ey = 10 + 20 + 5;
+          for (const [name, endpoint] of Object.entries(service.endpoints)) {
+            endpoint.name = name;
+            endpoint.service = service;
             endpoint.x = sw - 10;
             endpoint.y = ey;
-            if(endpoint.connected === undefined) {endpoint.connected = [];}
+            if (endpoint.connected === undefined) {
+              endpoint.connected = [];
+            } else if (!Array.isArray(endpoint.connected)) {
+              endpoint.connected = [endpoint.connected];
+            }
+            endpoint.connected = endpoint.connected.map(c => {
+              cx = cx + 5;
+
+              return { x: cx, target: c };
+            });
             ey += 12;
           }
 
@@ -35,14 +47,19 @@
   }
 
   let width = 400;
-  let height = 700;
+  let height = 900;
 
-  function endpointFor(services,exp) {
-    const m = exp.match(/service\((\w+)\)\.(\w+)/);
+  function endpointFor(services, exp) {
+    const m = exp.match(/service\((\w+)\)\.(.+)/);
 
-    if(m) {
+    if (m) {
       return services[m[1]].endpoints[m[2]];
     }
+  }
+
+  function coordsFor(services, exp, current) {
+    const endpoint = endpointFor(services, exp);
+    return `V${endpoint.service.y + endpoint.y - current.service.y - current.y}H${endpoint.x}`;
   }
 </script>
 
@@ -55,6 +72,20 @@
   .service rect {
     stroke: none;
     opacity: 0.35;
+  }
+
+  .endpoint {
+    text-anchor: end;
+    font-size: 0.8em;
+    overflow: visible;
+  }
+
+  .connection {
+    fill: none;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
   }
 </style>
 
@@ -73,10 +104,18 @@
             fill={service.state === 'running' ? 'green' : 'red'} />
           <text x="8" y="22">{service.name}</text>
           {#each Object.values(service.endpoints) as endpoint}
-            <circle cx={endpoint.x} cy={endpoint.y} r="5" />
-            <!--{#each endpoint.connected as connected}
-              <path d="C {endpoint.x} {endpoint.y} 0 0 50 50" stroke="blue" fill="transparent"/>
-            {/each}-->
+            <g
+              class="endpoint"
+              transform="translate({endpoint.x - 60},{endpoint.y})">
+
+              <text x={52} y={3}>{endpoint.name}</text>
+              <circle cx="60" cy="0" r="5" />
+              {#each endpoint.connected as connected}
+                <path
+                  class="connection"
+                  d="M60 0H{connected.x}{coordsFor(services, connected.target, endpoint)}" />
+              {/each}
+            </g>
           {/each}
         </g>
       {/each}
