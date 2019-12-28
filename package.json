@@ -42,6 +42,7 @@
   "config": {
     "base": "/services/entitlements",
     "api": "/services/entitlements/api",
+    "api_ws": "wss://mfelten.dynv6.net/services/entitlements/api",
     "proxyTarget": "https://mfelten.dynv6.net/"
   },
   "pacman": {

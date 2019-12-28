@@ -5,12 +5,13 @@
   import version from 'consts:version';
   import description from 'consts:description';
   import api from 'consts:api';
+  import api_ws from 'consts:api_ws';
+
   import base from 'consts:base';
   import name from 'consts:name';
 
-  let uptime = websocketStore("wss://mfelten.dynv6.net/services/entitlements/api/state/uptime", -1);
-  let memory = websocketStore("wss://mfelten.dynv6.net/services/entitlements/api/state/memory", { heapTotal: -1, heapUsed: -1, external: -1, rss: -1});
-
+  let uptime = websocketStore( api_ws + "/state/uptime", -1);
+  let memory = websocketStore( api_ws + "/state/memory", { heapTotal: -1, heapUsed: -1, external: -1, rss: -1});
 </script>
 
 <div>
