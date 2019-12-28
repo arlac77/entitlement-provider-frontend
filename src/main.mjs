@@ -27,11 +27,10 @@ export const router = new Router(
     route("/login", Login),
     route("/entitlements", needsSession, Entitlements),
     route("/services", needsSession, Services),
-    route("/about", About)
+    route("/about", needsSession, About)
   ],
   base
 );
-
 
 export default new App({
   target: document.body

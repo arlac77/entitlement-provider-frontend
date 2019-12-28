@@ -10,14 +10,13 @@
   import base from "consts:base";
   import name from "consts:name";
 
-  let uptime = websocketStore(api_ws + "/state/uptime", -1, [
-    "access_token",
-    "123456"
-  ]);
+  const protocols = ["access_token", session.access_token];
+
+  let uptime = websocketStore(api_ws + "/state/uptime", -1, protocols);
   let memory = websocketStore(
     api_ws + "/state/memory",
     { heapTotal: -1, heapUsed: -1, external: -1, rss: -1 },
-    ["access_token", "123456"]
+    protocols
   );
 </script>
 
