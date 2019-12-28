@@ -4705,10 +4705,10 @@ svelte-guard-history-router@^1.1.9:
   dependencies:
     multi-path-matcher "^2.0.4"
 
-svelte-session-manager@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/svelte-session-manager/-/svelte-session-manager-1.0.3.tgz#3a20d328010418e8e5bd168d5f56c4eb8dde16f0"
-  integrity sha512-WPYKnd2FsG7YOXK7UKseNgfrtQx+QmdafxhgrMzNF2yx8c2cEzRuaUl9DEvlG2Bmoxe8CYM4iYvoPa8m2n2KTA==
+svelte-session-manager@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/svelte-session-manager/-/svelte-session-manager-1.0.4.tgz#ebb516a23d0863d78d7512a0bcee4c88bddc821c"
+  integrity sha512-aTqPshFG+0RQDF51buFJZxxG7v2kYsIB4A98vwVA7fJtLkLGrgf5RW0kOyr6zM5tthgqkXLPQkluo5rxvkwwOQ==
 
 "svelte-websocket-store@https://github.com/arlac77/svelte-websocket-store.git":
   version "0.0.0-semantic-release"
