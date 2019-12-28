@@ -2,16 +2,23 @@
   import { dateFormatter, formatDuration, formatBytes } from "svelte-common";
   import { websocketStore } from "svelte-websocket-store";
   import { session } from "../main.mjs";
-  import version from 'consts:version';
-  import description from 'consts:description';
-  import api from 'consts:api';
-  import api_ws from 'consts:api_ws';
+  import version from "consts:version";
+  import description from "consts:description";
+  import api from "consts:api";
+  import api_ws from "consts:api_ws";
 
-  import base from 'consts:base';
-  import name from 'consts:name';
+  import base from "consts:base";
+  import name from "consts:name";
 
-  let uptime = websocketStore( api_ws + "/state/uptime", -1);
-  let memory = websocketStore( api_ws + "/state/memory", { heapTotal: -1, heapUsed: -1, external: -1, rss: -1});
+  let uptime = websocketStore(api_ws + "/state/uptime", -1, [
+    "access_token",
+    "123456"
+  ]);
+  let memory = websocketStore(
+    api_ws + "/state/memory",
+    { heapTotal: -1, heapUsed: -1, external: -1, rss: -1 },
+    ["access_token", "123456"]
+  );
 </script>
 
 <div>
@@ -33,7 +40,9 @@
       </tr>
       <tr>
         <td>Uptime</td>
-        <td>{#if $uptime < 0}down{:else}{formatDuration($uptime)}{/if}</td>
+        <td>
+          {#if $uptime < 0}down{:else}{formatDuration($uptime)}{/if}
+        </td>
       </tr>
       <tr>
         <td>Server Heap Total</td>
