@@ -61,6 +61,15 @@
     const endpoint = endpointFor(services, exp);
     return `V${endpoint.service.y + endpoint.y - current.service.y - current.y}H${endpoint.x}`;
   }
+
+  const stateColor = {
+    "running" : "green",
+    "starting": "green",
+    "stopped" : "gray",
+    "stoppin" : "gray",
+    "failed" : "red"
+  };
+
 </script>
 
 <style>
@@ -101,7 +110,7 @@
             y="0"
             width={service.w}
             height={service.h}
-            fill={service.state === 'running' ? 'green' : 'red'} />
+            fill={stateColor[service.state]} />
           <text x="8" y="22">{service.name}</text>
           {#each Object.values(service.endpoints) as endpoint}
             <g
