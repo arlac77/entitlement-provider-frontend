@@ -19,10 +19,24 @@
 
           let ey = 10 + 20 + 5;
           for (const [name, endpoint] of Object.entries(service.endpoints)) {
+            if (endpoint.interceptors === undefined) {
+              endpoint.interceptors = [];
+            } else if (!Array.isArray(endpoint.interceptors)) {
+              endpoint.interceptors = [endpoint.interceptors];
+            }
+
+            let ix = 60; // sw -42;
+
+            endpoint.interceptors = endpoint.interceptors.map(i => {
+              ix = ix + 10;
+              return { x: ix, i };
+            });
+
             endpoint.name = name;
             endpoint.service = service;
             endpoint.x = sw - 10;
             endpoint.y = ey;
+
             if (endpoint.connected === undefined) {
               endpoint.connected = [];
             } else if (!Array.isArray(endpoint.connected)) {
@@ -30,7 +44,6 @@
             }
             endpoint.connected = endpoint.connected.map(c => {
               cx = cx + 5;
-
               return { x: cx, target: c };
             });
             ey += 12;
@@ -47,7 +60,7 @@
   }
 
   let width = 400;
-  let height = 900;
+  let height = 1000;
 
   function endpointFor(services, exp) {
     const m = exp.match(/service\((\w+)\)\.(.+)/);
@@ -59,17 +72,19 @@
 
   function coordsFor(services, exp, current) {
     const endpoint = endpointFor(services, exp);
-    return `V${endpoint.service.y + endpoint.y - current.service.y - current.y}H${endpoint.x}`;
+    return `V${endpoint.service.y +
+      endpoint.y -
+      current.service.y -
+      current.y}H${endpoint.x}`;
   }
 
   const stateColor = {
-    "running" : "green",
-    "starting": "green",
-    "stopped" : "gray",
-    "stoppin" : "gray",
-    "failed" : "red"
+    running: "green",
+    starting: "green",
+    stopped: "gray",
+    stoppin: "gray",
+    failed: "red"
   };
-
 </script>
 
 <style>
@@ -81,6 +96,10 @@
   .service rect {
     stroke: none;
     opacity: 0.35;
+  }
+
+  .service rect:hover {
+    opacity: 0.50;
   }
 
   .endpoint {
@@ -96,6 +115,11 @@
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
+
+  .connection:hover {
+    stroke-width: 5
+  }
+
 </style>
 
 {#await fetchServices()}
@@ -118,11 +142,18 @@
               transform="translate({endpoint.x - 60},{endpoint.y})">
 
               <text x={52} y={3}>{endpoint.name}</text>
-              <circle cx="60" cy="0" r="5" />
+              <circle
+                cx="60"
+                cy="0"
+                r="5"
+                fill={endpoint.open ? 'black' : 'gray'} />
               {#each endpoint.connected as connected}
                 <path
                   class="connection"
                   d="M60 0H{connected.x}{coordsFor(services, connected.target, endpoint)}" />
+              {/each}
+              {#each endpoint.interceptors as interceptor}
+                <rect x={interceptor.x} y="-4" width="8" height="8" />
               {/each}
             </g>
           {/each}
