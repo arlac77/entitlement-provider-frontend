@@ -6,57 +6,74 @@
   const sw = 100;
 
   async function fetchServices() {
-    return fetch(`${api}/services`, {
+    const response = await fetch(`${api}/services`, {
       headers: session.authorizationHeader
-    })
-      .then(response => response.json())
-      .then(json => {
-        let cx = 110;
-        let y = 0;
-        for (const service of Object.values(json)) {
-          service.x = 10;
-          service.y = y;
+    });
 
-          let ey = 10 + 20 + 5;
-          for (const [name, endpoint] of Object.entries(service.endpoints)) {
-            if (endpoint.interceptors === undefined) {
-              endpoint.interceptors = [];
-            } else if (!Array.isArray(endpoint.interceptors)) {
-              endpoint.interceptors = [endpoint.interceptors];
-            }
+    const json = await response.json();
 
-            let ix = 60; // sw -42;
+    const endpoints = new Set();
 
-            endpoint.interceptors = endpoint.interceptors.map(i => {
-              ix = ix + 10;
-              return { x: ix, i };
-            });
+    let cx = 110;
+    let y = 0;
+    for (const service of Object.values(json)) {
+      service.x = 10;
+      service.y = y;
 
-            endpoint.name = name;
-            endpoint.service = service;
-            endpoint.x = sw - 10;
-            endpoint.y = ey;
+      let ey = 10 + 20 + 5;
+      for (const [name, endpoint] of Object.entries(service.endpoints)) {
+        const ci = `service(${service.name}).${name}`;
 
-            if (endpoint.connected === undefined) {
-              endpoint.connected = [];
-            } else if (!Array.isArray(endpoint.connected)) {
-              endpoint.connected = [endpoint.connected];
-            }
-            endpoint.connected = endpoint.connected.map(c => {
-              cx = cx + 5;
-              return { x: cx, target: c };
-            });
-            ey += 12;
-          }
-
-          service.w = sw;
-          service.h = ey > sh ? ey : sh;
-
-          y += service.h + 10;
+        if (endpoint.interceptors === undefined) {
+          endpoint.interceptors = [];
+        } else if (!Array.isArray(endpoint.interceptors)) {
+          endpoint.interceptors = [endpoint.interceptors];
         }
 
-        return json;
-      });
+        let ix = 60;
+
+        endpoint.interceptors = endpoint.interceptors.map(i => {
+          ix = ix + 10;
+          return { x: ix, i };
+        });
+
+        endpoint.name = name;
+        endpoint.service = service;
+        endpoint.x = sw - 10 - 10;
+        endpoint.y = ey;
+
+        if (endpoint.connected === undefined) {
+          endpoint.connected = [];
+        } else if (!Array.isArray(endpoint.connected)) {
+          endpoint.connected = [endpoint.connected];
+        }
+        endpoint.connected = endpoint.connected
+          .map(c => {
+            let first = true;
+
+            for (const i of [`${ci}-${c}`, `${c}-${ci}`]) {
+              if (endpoints.has(i)) {
+                first = false;
+              } else {
+                endpoints.add(i);
+              }
+            }
+
+            cx = cx + 5;
+            return { x: cx, target: c, first };
+          })
+          .filter(c => c.first);
+
+        ey += 12;
+      }
+
+      service.w = sw;
+      service.h = ey > sh ? ey : sh;
+
+      y += service.h + 10;
+    }
+
+    return json;
   }
 
   let width = 400;
@@ -99,7 +116,7 @@
   }
 
   .service rect:hover {
-    opacity: 0.50;
+    opacity: 0.5;
   }
 
   .endpoint {
@@ -117,9 +134,8 @@
   }
 
   .connection:hover {
-    stroke-width: 5
+    stroke-width: 5;
   }
-
 </style>
 
 {#await fetchServices()}
