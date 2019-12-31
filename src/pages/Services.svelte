@@ -4,6 +4,7 @@
 
   const sh = 50;
   const sw = 100;
+  const ex = 80;
 
   async function fetchServices() {
     const response = await fetch(`${api}/services`, {
@@ -30,7 +31,7 @@
           endpoint.interceptors = [endpoint.interceptors];
         }
 
-        let ix = 60;
+        let ix = ex - 4;
 
         endpoint.interceptors = endpoint.interceptors.map(i => {
           ix = ix + 10;
@@ -39,7 +40,7 @@
 
         endpoint.name = name;
         endpoint.service = service;
-        endpoint.x = sw - 10 - 10;
+        endpoint.x = ex;
         endpoint.y = ey;
 
         if (endpoint.connected === undefined) {
@@ -157,16 +158,16 @@
               class="endpoint"
               transform="translate({endpoint.x - 60},{endpoint.y})">
 
-              <text x={52} y={3}>{endpoint.name}</text>
+              <text x={72} y={3}>{endpoint.name}</text>
               <circle
-                cx="60"
+                cx="80"
                 cy="0"
                 r="5"
                 fill={endpoint.open ? 'black' : 'gray'} />
               {#each endpoint.connected as connected}
                 <path
                   class="connection"
-                  d="M60 0H{connected.x}{coordsFor(services, connected.target, endpoint)}" />
+                  d="M80 0H{connected.x}{coordsFor(services, connected.target, endpoint)}" />
               {/each}
               {#each endpoint.interceptors as interceptor}
                 <rect x={interceptor.x} y="-4" width="8" height="8" />
