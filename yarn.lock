@@ -385,9 +385,9 @@ ansi-styles@^3.2.1:
     color-convert "^1.9.0"
 
 ansi-styles@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.2.0.tgz#5681f0dcf7ae5880a7841d8831c4724ed9cc0172"
-  integrity sha512-7kFQgnEaMdRtwf6uSfUnVr9gSGC7faurn+J/Mv90/W+iTtN0405/nLdopfMWwchyxhbGYl6TC4Sccn9TUkGAgg==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.2.1.tgz#90ae75c424d008d2624c5bf29ead3177ebfcf359"
+  integrity sha512-9VGjrMsG1vePxcSweQsN20KY/c4zN0h9fLjqAbwbPfahM3t+NL+M9HC8xeXG2I8pX5NoamTGNuomEUFI7fcUjA==
   dependencies:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
@@ -3536,9 +3536,9 @@ p-limit@^1.1.0:
     p-try "^1.0.0"
 
 p-limit@^2.0.0, p-limit@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.1.tgz#aa07a788cc3151c939b5131f63570f0dd2009537"
-  integrity sha512-85Tk+90UCVWvbDavCLKPOLC9vvY8OwEX/RtKF+/1OADJMVlFfEHOiMTPVyxg7mk/dKa+ipdHm0OUkTvCpMTuwg==
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.2.tgz#61279b67721f5287aa1c13a9a7fbbc48c9291b1e"
+  integrity sha512-WGR+xHecKTr7EbUEhyLSh5Dube9JtdiG78ufaeLxTgpudf/20KqyMioIUZJAezlTIi6evxuoUs9YXc11cU+yzQ==
   dependencies:
     p-try "^2.0.0"
 
@@ -4710,9 +4710,10 @@ svelte-session-manager@^1.0.4:
   resolved "https://registry.yarnpkg.com/svelte-session-manager/-/svelte-session-manager-1.0.4.tgz#ebb516a23d0863d78d7512a0bcee4c88bddc821c"
   integrity sha512-aTqPshFG+0RQDF51buFJZxxG7v2kYsIB4A98vwVA7fJtLkLGrgf5RW0kOyr6zM5tthgqkXLPQkluo5rxvkwwOQ==
 
-"svelte-websocket-store@https://github.com/arlac77/svelte-websocket-store.git":
-  version "0.0.0-semantic-release"
-  resolved "https://github.com/arlac77/svelte-websocket-store.git#d2bb3a04eeb78a6e70e068ded0a23e2a9539ede3"
+svelte-websocket-store@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-websocket-store/-/svelte-websocket-store-1.0.0.tgz#ce8c6765a6ade5e53d9a497ed0e46957016133f2"
+  integrity sha512-s5RyjXMN9m+WuimkPJWts0i0ft8dd9RP4GXNo/reLw8C8zmaHqN4CBCaFIB2zIGDQ9cAXBtoURD1Pk+kQkt2cg==
 
 svelte@^3.16.7:
   version "3.16.7"
@@ -5228,9 +5229,9 @@ yargs@^11.0.0:
     yargs-parser "^9.0.2"
 
 yargs@^15.0.1:
-  version "15.0.2"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.0.2.tgz#4248bf218ef050385c4f7e14ebdf425653d13bd3"
-  integrity sha512-GH/X/hYt+x5hOat4LMnCqMd8r5Cv78heOMIJn1hr7QPPBqfeC6p89Y78+WB9yGDvfpCvgasfmWLzNzEioOUD9Q==
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.1.0.tgz#e111381f5830e863a89550bd4b136bb6a5f37219"
+  integrity sha512-T39FNN1b6hCW4SOIk1XyTOWxtXdcen0t+XYrysQmChzSipvhBO8Bj0nK1ozAasdk24dNWuMZvr4k24nz+8HHLg==
   dependencies:
     cliui "^6.0.0"
     decamelize "^1.2.0"
