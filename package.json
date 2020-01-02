@@ -12,7 +12,7 @@
     "svelte-common": "^1.1.2",
     "svelte-guard-history-router": "^1.1.9",
     "svelte-session-manager": "^1.0.4",
-    "svelte-websocket-store": "https://github.com/arlac77/svelte-websocket-store.git"
+    "svelte-websocket-store": "^1.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
