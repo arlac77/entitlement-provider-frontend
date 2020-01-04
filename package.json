@@ -15,11 +15,11 @@
     "svelte-websocket-store": "^1.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.0",
-    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^6.1.0",
     "@semantic-release/exec": "^3.3.8",
     "npm-pkgbuild": "^6.11.2",
-    "rollup": "^1.27.14",
+    "rollup": "^1.28.0",
     "rollup-plugin-consts": "^1.0.1",
     "rollup-plugin-copy": "^3.1.0",
     "rollup-plugin-dev": "^1.1.1",
@@ -40,15 +40,12 @@
   },
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
   "config": {
-    "base": "/services/entitlements",
     "api": "/services/entitlements/api",
     "api_ws": "wss://mfelten.dynv6.net/services/entitlements/api",
+    "base": "/services/entitlements",
     "proxyTarget": "https://mfelten.dynv6.net/"
   },
   "pacman": {
-    "groups": "services",
-    "hooks": "pacman/hooks.sh",
-    "installdir": "/services/entitlement-provider/frontend",
     "content": {
       "${installdir}/": {
         "base": "public"
@@ -59,7 +56,10 @@
       "entitlement-provider": ">=2.3.6",
       "systemd": ">=244",
       "nginx-mainline": ">=1.17.4"
-    }
+    },
+    "groups": "services",
+    "hooks": "pacman/hooks.sh",
+    "installdir": "/services/entitlement-provider/frontend"
   },
   "release": {
     "plugins": [
