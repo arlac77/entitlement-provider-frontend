@@ -1,5 +1,5 @@
 <script>
-  import { dateFormatter, formatDuration, formatBytes } from "svelte-common";
+  import { Duration, dateFormatter, formatBytes } from "svelte-common";
   import { websocketStore } from "svelte-websocket-store";
   import { session } from "../main.mjs";
   import version from "consts:version";
@@ -39,7 +39,7 @@
       <tr>
         <td>Uptime</td>
         <td>
-          {#if $uptime < 0}down{:else}{formatDuration($uptime)}{/if}
+          {#if $uptime < 0}down{:else}<Duration seconds={$uptime}/>{/if}
         </td>
       </tr>
       <tr>
