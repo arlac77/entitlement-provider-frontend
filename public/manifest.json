@@ -1,6 +1,6 @@
 {
-  "name": "entitlement-provider-frontend",
-  "description": "web frontend for the entitlement-provider",
+  "name": "{{name}}",
+  "description": "{{description}}",
   "icons": [
     {
       "src": "facicon.ico",
