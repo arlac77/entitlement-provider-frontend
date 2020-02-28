@@ -5,6 +5,9 @@
     {
       "src": "facicon.ico",
       "sizes": "16x16"
+    },
+    {
+      "src": "logo.svg"
     }
   ],
   "start_url": "/index.html",
