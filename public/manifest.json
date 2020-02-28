@@ -7,7 +7,8 @@
       "sizes": "16x16"
     },
     {
-      "src": "logo.svg"
+      "src": "logo.svg",
+      "sizes": "60x60"
     }
   ],
   "start_url": "/index.html",
