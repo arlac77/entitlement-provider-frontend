@@ -5954,7 +5954,7 @@ svelte-websocket-store@^1.1.0:
   resolved "http://mfelten.dynv6.net/services/verdaccio/svelte-websocket-store/-/svelte-websocket-store-1.1.0.tgz#38d60723cefd6828fce2225bd2a70b9475694a28"
   integrity sha512-GVnywUrbnXCnephY+omCgszSGqrHe4upl2ULjkOAxXY+ZTh/ok/Dhe4B3CgzrFNhBh45H7Ee/zURp3fLwpSLBw==
 
-svelte@^3.23.1:
+svelte@^3.23.2:
   version "3.23.2"
   resolved "http://mfelten.dynv6.net/services/verdaccio/svelte/-/svelte-3.23.2.tgz#f3e500384261a2e77b29681ee744c3c790fbcdc3"
   integrity sha512-hE8GeTM83YVR4GY6/6PeDEcGct4JS5aCi+IYbCAa76oaPSfuF7L85DQYULQxlTK/KPWzw3L1GRGmC3oPG/PQoA==
