@@ -14,7 +14,7 @@
   "dependencies": {
     "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^2.0.3",
-    "svelte-guard-history-router": "^1.2.2",
+    "svelte-guard-history-router": "^1.2.3",
     "svelte-session-manager": "^1.0.12",
     "svelte-websocket-store": "^1.1.0"
   },
@@ -36,9 +36,6 @@
     "rollup-plugin-terser": "^6.1.0",
     "semantic-release": "^17.0.8",
     "svelte": "^3.23.1"
-  },
-  "engines": {
-    "node": ">=14.3.0"
   },
   "repository": {
     "type": "git",
@@ -63,8 +60,8 @@
     },
     "depends": {
       "entitlement-provider": ">=2.3.6",
-      "systemd": ">=244",
-      "nginx-mainline": ">=1.17.8"
+      "systemd": ">=245",
+      "nginx-mainline": ">=1.19.0"
     },
     "groups": "services",
     "hooks": "pacman/hooks.sh",
