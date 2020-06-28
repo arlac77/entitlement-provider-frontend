@@ -1,6 +1,5 @@
 import { BaseRouter, route, Guard } from "svelte-guard-history-router";
 import { Session } from "svelte-session-manager";
-//import Home from "./pages/Home.svelte";
 import App from "./App.svelte";
 import base from 'consts:base';
 
@@ -16,12 +15,7 @@ class SessionGuard extends Guard {
 
 export const needsSession = new SessionGuard();
 
-export const router = new BaseRouter(
-  [
-    //route("*", Home)
-  ],
-  base
-);
+export const router = new BaseRouter( [], base);
 
 export default new App({
   target: document.body

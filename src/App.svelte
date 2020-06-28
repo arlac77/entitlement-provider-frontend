@@ -16,7 +16,6 @@
 
 <Router {router}>
   <nav>
-    ´
     <Route path="/" component={Home}>
       <img class="logo" src="logo.svg" alt="Entitlement Provider" />
       Entitlement Provider
@@ -53,7 +52,6 @@
       </li>
       <Route path="/about" component={About}>About</Route>
     </ul>
-    ´
   </nav>
   <main>
     <Outlet />
