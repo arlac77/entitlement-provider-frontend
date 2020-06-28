@@ -1,4 +1,4 @@
-import { BaseRouter, route, Guard } from "svelte-guard-history-router";
+import { BaseRouter, Guard } from "svelte-guard-history-router";
 import { Session } from "svelte-session-manager";
 import App from "./App.svelte";
 import base from 'consts:base';
