@@ -22,12 +22,12 @@
     </Route>
     <ul class="left">
       <li>
-        <Route path="/entitlements" guards={[needsSession]} component={Entitlements}>
+        <Route path="/entitlements" guards={needsSession} component={Entitlements}>
           Entitlements
         </Route>
       </li>
       <li>
-        <Route path="/services" guards={[needsSession]} component={Services}>Services</Route>
+        <Route path="/services" guards={needsSession} component={Services}>Services</Route>
       </li>
     </ul>
     <ul>
