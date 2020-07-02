@@ -1,8 +1,9 @@
 <script>
   import * as style from "./main.css";
+  import base from 'consts:base';
   import { Router, Route, Outlet } from "svelte-guard-history-router";
   import { Menue } from "svelte-common";
-  import { router, session, needsSession } from "./main.mjs";
+  import { session, needsSession } from "./main.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
   import Home from "./pages/Home.svelte";
@@ -14,7 +15,7 @@
   }
 </script>
 
-<Router {router}>
+<Router {base}>
   <nav>
     <Route href="/" path="*" component={Home}>
       <img class="logo" src="logo.svg" alt="Entitlement Provider" />
