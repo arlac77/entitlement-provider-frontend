@@ -12,7 +12,7 @@
     "start": "rollup -c -w"
   },
   "dependencies": {
-    "mf-styling": "arlac77/mf-styling",guard-history-router-2.8.0
+    "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^2.0.4",
     "svelte-guard-history-router": "^2.8.0",
     "svelte-session-manager": "^1.1.4",
