@@ -3,7 +3,7 @@
   import base from 'consts:base';
   import { Router, Route, Outlet } from "svelte-guard-history-router";
   import { Menue } from "svelte-common";
-  import { session, needsSession } from "./main.mjs";
+  import { session, enshureSession } from "./main.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
   import Home from "./pages/Home.svelte";
@@ -23,12 +23,12 @@
     </Route>
     <ul class="left">
       <li>
-        <Route path="/entitlements" guards={needsSession} component={Entitlements}>
+        <Route path="/entitlements" guards={enshureSession} component={Entitlements}>
           Entitlements
         </Route>
       </li>
       <li>
-        <Route path="/services" guards={needsSession} component={Services}>Services</Route>
+        <Route path="/services" guards={enshureSession} component={Services}>Services</Route>
       </li>
     </ul>
     <ul>
