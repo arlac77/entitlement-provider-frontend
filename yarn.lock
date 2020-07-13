@@ -32,6 +32,28 @@
     update-notifier "^2.2.0"
     yargs "^8.0.2"
 
+"@kronos-integration/endpoint@^9.0.5":
+  version "9.0.5"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-9.0.5.tgz#341ebc81c8d30f54cfd35caf452a143b6fdc1dbb"
+  integrity sha512-5+ET+Da5ZXPfX5V7tkBRPaB/IxSjalF2nQ+v+BKbfZg8aXDHxXhtQi1iyCe6fXGZyKHY34Ayv9UZj/X2DkO3Hw==
+  dependencies:
+    "@kronos-integration/interceptor" "^10.0.0"
+
+"@kronos-integration/interceptor@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor/-/interceptor-10.0.0.tgz#1b7f441409d8f48abdd2000c135795e0d5c747c6"
+  integrity sha512-vrsCYolgud0jZDqlkhXAoBxgVMkcaarVBTTi1zV3VUVkuiBdC8fasnTwvUzz04qnlrERdv3+U9jqdwFibNTxBw==
+  dependencies:
+    model-attributes "^4.1.3"
+
+"@kronos-integration/svelte-components@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/svelte-components/-/svelte-components-1.0.3.tgz#66781c7d26e5c95ef366ed5a7a72f72b0e00f9b1"
+  integrity sha512-RIqKT3t+zAYGOKff/Xikjiu3xHahMS5Iehdl6sicn9NntBexJc8+OfMlYf8zsORqtKGXi/uOx+QLyS86hx9XCQ==
+  dependencies:
+    "@kronos-integration/endpoint" "^9.0.5"
+    svelte-guard-history-router "^2.17.2"
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
@@ -3495,7 +3517,6 @@ methods@~1.1.0:
 
 mf-styling@arlac77/mf-styling:
   version "0.0.0-semantic-release"
-  uid cd67104f787721c8c6a9e72239494fa5fbc09bbc
   resolved "https://codeload.github.com/arlac77/mf-styling/tar.gz/cd67104f787721c8c6a9e72239494fa5fbc09bbc"
 
 micromatch@^4.0.2:
@@ -3596,6 +3617,11 @@ mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.5, mkdirp@~0.5.0, mkdirp@~0.5.1:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+model-attributes@^4.1.3:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/model-attributes/-/model-attributes-4.1.6.tgz#5cec089e2122746ee8d6fc2426b3d505e972508b"
+  integrity sha512-fN6a35o+qJpjtS8I43mEyQxS0eXUns3/sI18jp7RFoUGYAyn3B8YUUlSj9N/5IwCIWUkQqLYnIPrmIBdXT0FVQ==
 
 modify-values@^1.0.0:
   version "1.0.1"
@@ -5895,10 +5921,10 @@ svelte-common@^2.0.4:
   resolved "https://registry.yarnpkg.com/svelte-common/-/svelte-common-2.0.4.tgz#3db3c299b60e90cdd4f5df84a1c219b31dd7a143"
   integrity sha512-Eba+QxcrCxvq1R+na0pkaIAe0zLHWHWvjj5Hd2C0c/Nj1A+k9auX1PbXmC84ghMTE0q/meUjIMrjZhnHk7hAaw==
 
-svelte-guard-history-router@^2.18.0:
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/svelte-guard-history-router/-/svelte-guard-history-router-2.18.0.tgz#f19b5e1b7a1fcf076be51500ed1dc2bc23618c36"
-  integrity sha512-MkIlcWLAOCggsz/pgqRgfamjJ+sz4pG7lzV1aCbcq/8mcf+c7tvjqR9oxoGkuCFyiEhFTGqzJN8W+2ucUElGCA==
+svelte-guard-history-router@^2.17.2, svelte-guard-history-router@^2.19.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/svelte-guard-history-router/-/svelte-guard-history-router-2.19.0.tgz#8b473054cb0e3f6e73154d0de1e89985b41c77b3"
+  integrity sha512-P0xd7KFpbLWP4eNA/Vk1tRwq6Yjv3tllxOVnL3xPMe3VGE7IMc9H93jqHOQC/gSy4mXQb9XiOYWoV8JfEL27mA==
   dependencies:
     multi-path-matcher "^2.1.2"
 
