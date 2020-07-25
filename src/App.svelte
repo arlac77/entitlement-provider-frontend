@@ -10,10 +10,6 @@
   import Entitlements from "./pages/Entitlements.svelte";
   import Services from "./pages/Services.svelte";
 
-  function logout() {
-    session.invalidate();
-  }
-
   const enshureSession = redirectGuard("/login",() => !session.isValid);
 </script>
 
@@ -42,7 +38,7 @@
               <a
                 href="/"
                 class="dropdown-item"
-                on:click|preventDefault={logout}>
+                on:click|preventDefault={() => session.invalidate()}>
                 Logout {$session.username}
               </a>
               <div class="dropdown-divider" />
