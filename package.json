@@ -14,9 +14,9 @@
   "dependencies": {
     "@kronos-integration/svelte-components": "^1.1.10",
     "mf-styling": "arlac77/mf-styling",
-    "svelte-common": "^2.1.5",
+    "svelte-common": "^2.1.6",
     "svelte-guard-history-router": "^2.23.9",
-    "svelte-session-manager": "^1.1.6",
+    "svelte-session-manager": "^1.1.7",
     "svelte-websocket-store": "^1.1.0"
   },
   "devDependencies": {
@@ -59,9 +59,9 @@
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
-      "entitlement-provider": ">=2.3.6",
-      "systemd": ">=245",
-      "nginx-mainline": ">=1.19.0"
+      "entitlement-provider": ">=2.3.92",
+      "systemd": ">=245.7",
+      "nginx-mainline": ">=1.19.1"
     },
     "groups": "services",
     "hooks": "pacman/hooks.sh",
