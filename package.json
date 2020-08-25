@@ -1,10 +1,19 @@
 {
   "name": "entitlement-provider-frontend",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "web frontend for the entitlement-provider",
   "keywords": [
     "svelte",
     "web"
+  ],
+  "contributors": [
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
   ],
   "license": "BSD-2-Clause",
   "scripts": {
@@ -81,8 +90,9 @@
   },
   "template": {
     "inheritFrom": [
+      "arlac77/template-github-action",
       "arlac77/template-svelte-app",
-      "arlac77/template-github"
+      "arlac77/template-arlac77-github"
     ]
   }
 }
