@@ -6,6 +6,7 @@
   import { session } from "./main.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
+  import ChangePassword from "./pages/ChangePassword.svelte";
   import Home from "./pages/Home.svelte";
   import Entitlements from "./pages/Entitlements.svelte";
   import Services from "./pages/Services.svelte";
@@ -27,6 +28,9 @@
       </li>
       <li>
         <Route path="/services" guards={enshureSession} component={Services}>Services</Route>
+      </li>
+      <li>
+        <Route path="/change-password" component={ChangePassword}>Change Password</Route>
       </li>
     </ul>
     <ul>
