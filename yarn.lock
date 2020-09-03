@@ -32,14 +32,7 @@
     update-notifier "^2.2.0"
     yargs "^8.0.2"
 
-"@kronos-integration/endpoint@^9.2.1":
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-9.2.1.tgz#6dfdea15eabcaa8700d072bd4c024f5517ccddd5"
-  integrity sha512-AnjPF1fzEdXpf07UQDTfaB+fD27cjnf6dH9b9vpDkRETZGq9tASdvZjqWYFmr7inTP/9tm4JQiAAEbBmai/tdw==
-  dependencies:
-    "@kronos-integration/interceptor" "^10.0.2"
-
-"@kronos-integration/endpoint@^9.2.2":
+"@kronos-integration/endpoint@^9.2.1", "@kronos-integration/endpoint@^9.2.2":
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-9.2.2.tgz#a8aaa06b70f337a01f286336614f5e4aca64baf2"
   integrity sha512-GsjnujVS3JMAgGnVqhTxNCFyv9TDaymFfTVW3XnZjY4Ifo1a1jGi2HcqL4s2wqQd4QEauklBpYsMZ1zq4TRwsw==
@@ -63,10 +56,10 @@
     model-attributes "^4.1.6"
     statetransition-mixin "^6.0.7"
 
-"@kronos-integration/svelte-components@^1.1.17":
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/svelte-components/-/svelte-components-1.1.17.tgz#17af37e6204550a2d670ffb9aec1c7718f560da1"
-  integrity sha512-LiDewpRZ+Eae/ws426ZsbUo5EhFBroYCIzjaJagLVeoUdVN8ccdLVrwS+Zf2NLmv31/Qcm8tTQWtrHHTPHwATQ==
+"@kronos-integration/svelte-components@^1.1.18":
+  version "1.1.18"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/svelte-components/-/svelte-components-1.1.18.tgz#5979ed1b563a5a8033622cea7c6732a6f283453f"
+  integrity sha512-Al7kWY9PnzYI5EPKY+8IyCKEbGqPbVdFD+asGpbgasu6B6r8kCHYxU4VwNUsFOFxf396hUh3IuARCyJpITDA1A==
   dependencies:
     "@kronos-integration/endpoint" "^9.2.2"
     "@kronos-integration/service" "^9.2.8"
