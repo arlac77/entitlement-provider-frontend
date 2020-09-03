@@ -29,14 +29,6 @@
         <td>{version}</td>
       </tr>
       <tr>
-        <td>Mounted</td>
-        <td>{base}</td>
-      </tr>
-      <tr>
-        <td>API</td>
-        <td>{api}</td>
-      </tr>
-      <tr>
         <td>Uptime</td>
         <td>
           {#if $uptime < 0}down{:else}<Duration seconds={$uptime}/>{/if}
