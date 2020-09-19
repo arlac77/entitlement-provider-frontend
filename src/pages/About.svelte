@@ -1,6 +1,7 @@
 <script>
   import {
     About,
+    ApplicationDetails,
     SessionDetails,
     ServerDetails
   } from "svelte-common";
@@ -24,7 +25,8 @@
   }
 </script>
 
-<About {name} {version} {description}>
+<About>
+  <ApplicationDetails {name} {version} {description} />
   <ServerDetails {server} />
   <SessionDetails session={$session} />
 </About>
