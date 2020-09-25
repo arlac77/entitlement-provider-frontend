@@ -5,6 +5,7 @@
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
+  "categories": ["utilities","security"],
   "icons": [
     {
       "src": "images/logo.svg",
