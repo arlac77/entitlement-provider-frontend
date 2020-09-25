@@ -17,7 +17,7 @@
 <Router {base}>
   <nav>
     <Route href="/" path="*" component={Home}>
-      <img class="logo" src="logo.svg" alt="Entitlement Provider" />
+      <img class="logo" src="images/logo.svg" alt="Entitlement Provider" />
       Entitlement Provider
     </Route>
     <ul class="left">
