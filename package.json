@@ -55,11 +55,11 @@
   },
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
   "config": {
-    "title": "Entitlement Provider",
     "api": "/services/entitlements/api",
     "api_ws": "wss://mfelten.dynv6.net/services/entitlements/api",
     "base": "/services/entitlements",
-    "proxyTarget": "https://mfelten.dynv6.net/"
+    "proxyTarget": "https://mfelten.dynv6.net/",
+    "title": "Entitlement Provider"
   },
   "pacman": {
     "content": {
