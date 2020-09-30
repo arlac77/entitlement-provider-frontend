@@ -24,7 +24,7 @@
     "@kronos-integration/svelte-components": "^1.1.27",
     "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^2.15.0",
-    "svelte-guard-history-router": "^2.26.0",
+    "svelte-guard-history-router": "^2.26.1",
     "svelte-session-manager": "^1.1.7",
     "svelte-websocket-store": "^1.1.0"
   },
@@ -70,7 +70,7 @@
     },
     "depends": {
       "entitlement-provider": ">=2.3.92",
-      "nginx-mainline": ">=1.19.2"
+      "nginx-mainline": ">=1.19.3"
     },
     "groups": "services",
     "hooks": "pacman/hooks.sh",
