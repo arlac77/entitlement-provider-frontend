@@ -2,7 +2,7 @@
   import * as style from "./main.css";
   import base from 'consts:base';
   import { Router, Route, Outlet,redirectGuard } from "svelte-guard-history-router";
-  import { Menue } from "svelte-common";
+  import { Menue, TopNav } from "svelte-common";
   import { session } from "./main.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
@@ -15,7 +15,7 @@
 </script>
 
 <Router {base}>
-  <nav>
+  <TopNav offset={42}>
     <Route href="/" path="*" component={Home}>
       <img class="logo" src="images/logo.svg" alt="Entitlement Provider" />
       Entitlement Provider
@@ -55,7 +55,7 @@
       </li>
       <Route path="/about" component={About}>About</Route>
     </ul>
-  </nav>
+  </TopNav>
   <main>
     <Outlet />
   </main>
