@@ -6,7 +6,8 @@
   export let router;
 
   let username = "";
-  let password = "";
+  let newPassword = "";
+  let repeatedNewPassword = "";
 
   let active = false;
   let message;
@@ -27,7 +28,7 @@
   }
 </script>
 
-<Modal close={() => router.abort()}>
+<Modal close={() => router.abort('/')}>
 
 <form on:submit|preventDefault={submit}>
   {#if message}
@@ -55,27 +56,45 @@
         disabled={active}
         bind:value={username} />
     </label>
-    <label for="password">
-      Password
+    <label for="new-password">
+      New Password
       <input
-        aria-label="password"
+        aria-label="new password"
         aria-required="true"
         size="32"
         autocorrect="off"
         autocapitalize="off"
-        autocomplete="current-password"
-        id="password"
+        autocomplete="new-password"
+        id="new-password"
         type="password"
-        placeholder="Password"
-        name="password"
+        placeholder="New Password"
+        name="new-password"
         required
         disabled={active}
-        bind:value={password} />
+        bind:value={newPassword} />
+    </label>
+    <label for="repeated-new-password">
+      Repeat New Password
+      <input
+        aria-label="repeated new password"
+        aria-required="true"
+        size="32"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="repeated-new-password"
+        id="repeated-new-password"
+        type="password"
+        placeholder="New Password"
+        name="repeated-new-password"
+        required
+        disabled={active}
+        bind:value={repeatedNewPassword} />
     </label>
   </slot>
 
   <slot name="submit">
-    <button id="submit" type="submit" disabled={!username || !password}>
+    <button id="submit" type="submit"
+      disabled={!username || !newPassword || newPassword !== repeatedNewPassword}>
       Change Password
       {#if active}
         <div class="spinner" />
