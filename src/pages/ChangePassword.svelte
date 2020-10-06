@@ -15,15 +15,17 @@
   async function submit() {
     try {
       active = true;
-      /*message = await login(session, endpoint, username, password);
-      if(!message && result !== undefined) {
-        await result();
-      }*/
+      
+      const response = await fetch(`${api}/password`, {
+         method: 'PATCH',
+         headers: session.authorizationHeader,
+         body: JSON.stringify({password: newPassword })
+      });
     } catch (e) {
       message = e;
     } finally {
       active = false;
-      password = "";
+      repeatedNewPassword = newPassword = "";
     }
   }
 </script>
