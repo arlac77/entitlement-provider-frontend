@@ -18,7 +18,7 @@
   <TopNav offset={42}>
     <Route href="/" path="*" component={Home}>
       <img class="logo" src="images/logo.svg" alt="Entitlement Provider" />
-      Entitlement Provider
+      Entitlements
     </Route>
     <ul class="left">
       <li>

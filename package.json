@@ -60,7 +60,7 @@
     "api_ws": "wss://mfelten.dynv6.net/services/entitlements/api",
     "base": "/services/entitlements",
     "proxyTarget": "https://mfelten.dynv6.net/",
-    "title": "Entitlement Provider"
+    "title": "Entitlements"
   },
   "pacman": {
     "content": {
