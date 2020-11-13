@@ -1,7 +1,12 @@
 <script>
   import * as style from "./main.css";
-  import base from 'consts:base';
-  import { Router, Route, Outlet,redirectGuard } from "svelte-guard-history-router";
+  import base from "consts:base";
+  import {
+    Router,
+    Route,
+    Outlet,
+    redirectGuard
+  } from "svelte-guard-history-router";
   import { Menue, TopNav } from "svelte-common";
   import { session } from "./main.mjs";
   import About from "./pages/About.svelte";
@@ -11,7 +16,7 @@
   import Entitlements from "./pages/Entitlements.svelte";
   import Services from "./pages/Services.svelte";
 
-  const enshureSession = redirectGuard("/login",() => !session.isValid);
+  const enshureSession = redirectGuard("/login", () => !session.isValid);
 </script>
 
 <Router {base}>
@@ -22,15 +27,22 @@
     </Route>
     <ul class="left">
       <li>
-        <Route path="/entitlements" guards={enshureSession} component={Entitlements}>
+        <Route
+          path="/entitlements"
+          guards={enshureSession}
+          component={Entitlements}>
           Entitlements
         </Route>
       </li>
       <li>
-        <Route path="/services" guards={enshureSession} component={Services}>Services</Route>
+        <Route path="/services" guards={enshureSession} component={Services}>
+          Services
+        </Route>
       </li>
       <li>
-        <Route path="/change-password" component={ChangePassword}>Change Password</Route>
+        <Route path="/change-password" component={ChangePassword}>
+          Change Password
+        </Route>
       </li>
     </ul>
     <ul>
@@ -43,7 +55,8 @@
                 href="/"
                 class="dropdown-item"
                 on:click|preventDefault={() => session.invalidate()}>
-                Logout {$session.username}
+                Logout
+                {$session.username}
               </a>
               <div class="dropdown-divider" />
               <a href="#!" class="dropdown-item">three</a>
