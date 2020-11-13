@@ -8,7 +8,7 @@
     redirectGuard
   } from "svelte-guard-history-router";
   import { Menue, TopNav } from "svelte-common";
-  import { session } from "./main.mjs";
+  import { session } from "./session.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
   import ChangePassword from "./pages/ChangePassword.svelte";

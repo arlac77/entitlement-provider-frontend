@@ -8,7 +8,8 @@
     ServiceWorkerRegistrationDetails
   } from "svelte-common";
   import { websocketStore } from "svelte-websocket-store";
-  import { session, serviceWorker, serviceWorkerRegistration } from "../main.mjs";
+  import { serviceWorker, serviceWorkerRegistration } from "../main.mjs";
+  import { session } from "../session.mjs";
   import name from "consts:title";
   import version from "consts:version";
   import description from "consts:description";

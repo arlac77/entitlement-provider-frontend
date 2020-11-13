@@ -1,5 +1,5 @@
 <script>
-  import { session } from "../main.mjs";
+  import { session } from "../session.mjs";
   import api from "consts:api";
 
   async function fetchEntitlements() {
