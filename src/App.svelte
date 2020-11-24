@@ -13,10 +13,11 @@
   import Login from "./pages/Login.svelte";
   import ChangePassword from "./pages/ChangePassword.svelte";
   import Home from "./pages/Home.svelte";
-  import Entitlements from "./pages/Entitlements.svelte";
+  import UserRoutes from "./UserRoutes.svelte";
+  import EntitlementRoutes from "./EntitlementRoutes.svelte";
   import Services from "./pages/Services.svelte";
 
-  const enshureSession = redirectGuard("/login", () => !session.isValid);
+  const guard = redirectGuard("/login", () => !session.isValid);
 </script>
 
 <Router {base}>
@@ -27,15 +28,13 @@
     </Route>
     <ul class="left">
       <li>
-        <Route
-          path="/entitlements"
-          guards={enshureSession}
-          component={Entitlements}>
-          Entitlements
-        </Route>
+        <UserRoutes {guard} {session}>User</UserRoutes>
       </li>
       <li>
-        <Route path="/services" guards={enshureSession} component={Services}>
+        <EntitlementRoutes {guard} {session}>Entitlements</EntitlementRoutes>
+      </li>
+      <li>
+        <Route path="/services" guards={guard} component={Services}>
           Services
         </Route>
       </li>
