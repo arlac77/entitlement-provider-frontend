@@ -1,8 +1,7 @@
 <script>
-  import { Route, DetailRoute, MasterRoute } from "svelte-guard-history-router";
+  import { Route, DetailRoute, MasterRoute, NamedObjectLink } from "svelte-guard-history-router";
   import UsersPage from "./pages/UsersPage.svelte";
   import UserPage from "./pages/UserPage.svelte";
-  import UserLink from "./components/UserLink.svelte";
   import { User } from "./user.mjs";
   import { fetchIterator } from "./util.mjs";
 
@@ -21,7 +20,7 @@
   <Route
     path="/:user"
     propertyMapping={{ interface: 'name' }}
-    linkComponent={UserLink}
+    linkComponent={NamedObjectLink}
     factory={DetailRoute}
     component={UserPage} />
 </Route>
