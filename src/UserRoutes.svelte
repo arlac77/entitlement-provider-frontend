@@ -2,6 +2,7 @@
   import { Route, DetailRoute, MasterRoute, NamedObjectLink } from "svelte-guard-history-router";
   import UsersPage from "./pages/UsersPage.svelte";
   import UserPage from "./pages/UserPage.svelte";
+  import EntitlementsPage from "./pages/EntitlementsPage.svelte";
   import { User } from "./user.mjs";
   import { fetchIterator } from "./util.mjs";
 
@@ -19,8 +20,14 @@
   <slot />
   <Route
     path="/:user"
-    propertyMapping={{ interface: 'name' }}
+    propertyMapping={{ user: 'name' }}
     linkComponent={NamedObjectLink}
     factory={DetailRoute}
-    component={UserPage} />
+    component={UserPage}>
+    <Route
+    path="/entitlements"
+    iteratorFor={transition => fetchIterator(`/user/${transition.params.user}/entitlements`, Entitlement, session)}
+    factory={MasterRoute}
+    component={EntitlementsPage}>
+    </Route>
 </Route>
