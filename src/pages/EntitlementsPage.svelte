@@ -1,4 +1,6 @@
 <script>
+  export let router;
+
   const route = router.route;
   const entitlements = $route.value;
 </script>
