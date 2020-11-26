@@ -1,7 +1,7 @@
 <script>
   import { Route, MasterRoute } from "svelte-guard-history-router";
+  import { Entitlement } from "svelte-entitlement";
   import EntitlementsPage from "./pages/EntitlementsPage.svelte";
-  import { Entitlement } from "./entitlement.mjs";
   import { fetchIterator } from "./util.mjs";
 
   export let session;

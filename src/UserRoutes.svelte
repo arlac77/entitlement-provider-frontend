@@ -5,10 +5,11 @@
     MasterRoute,
     NamedObjectLink
   } from "svelte-guard-history-router";
+  import { Entitlement } from "svelte-entitlement";
+
   import UsersPage from "./pages/UsersPage.svelte";
   import UserPage from "./pages/UserPage.svelte";
   import EntitlementsPage from "./pages/EntitlementsPage.svelte";
-  import { Entitlement } from "./entitlement.mjs";
   import { User } from "./user.mjs";
   import { fetchIterator } from "./util.mjs";
 
