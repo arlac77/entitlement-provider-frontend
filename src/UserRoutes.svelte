@@ -27,7 +27,7 @@
   <slot />
   <Route
     path="/:user"
-    propertyMapping={{ user: 'name' }}
+    propertyMapping={{ user: 'uid' }}
     linkComponent={NamedObjectLink}
     factory={DetailRoute}
     component={UserPage}>
