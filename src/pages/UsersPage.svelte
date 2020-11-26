@@ -1,4 +1,6 @@
 <script>
+  import { ObjectLink } from "svelte-guard-history-router";
+
   export let router;
 
   const route = router.route;
@@ -7,6 +9,8 @@
 
 <ul>
   {#each users as user}
-    <li>{user.cn}</li>
+    <li>
+      <ObjectLink object={user} />
+    </li>
   {/each}
 </ul>
