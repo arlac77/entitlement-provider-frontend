@@ -1,5 +1,5 @@
 <script>
-  import { EntitlementBadge } from "svelte-entitlement";
+  import { EntitlementBadges } from "svelte-entitlement";
 
   export let router;
 
@@ -7,10 +7,4 @@
   const entitlements = $route.value;
 </script>
 
-<ul>
-  {#each entitlements as entitlement}
-    <li>
-      <EntitlementBadge {entitlement} />
-    </li>
-  {/each}
-</ul>
+<EntitlementBadges {entitlements} />
