@@ -26,6 +26,10 @@
           new_password: newPassword
         })
       });
+
+      if(!response.ok) {
+        message = response.statusText;
+      }
     } catch (e) {
       message = e;
     } finally {
