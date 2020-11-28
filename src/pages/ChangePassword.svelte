@@ -30,7 +30,7 @@
       message = e;
     } finally {
       active = false;
-      repeatedNewPassword = newPassword = "";
+      password = repeatedNewPassword = newPassword = "";
     }
   }
 </script>
@@ -61,6 +61,23 @@
           required
           disabled={active}
           bind:value={username} />
+      </label>
+      <label for="current-password">
+        Current Password
+        <input
+          aria-label="current password"
+          aria-required="true"
+          size="32"
+          autocorrect="off"
+          autocapitalize="off"
+          autocomplete="current-password"
+          id="new-password"
+          type="password"
+          placeholder="Current Password"
+          name="password"
+          required
+          disabled={active}
+          bind:value={password} />
       </label>
       <label for="new-password">
         New Password
@@ -102,7 +119,7 @@
       <button
         id="submit"
         type="submit"
-        disabled={!username || !newPassword || newPassword !== repeatedNewPassword}>
+        disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
         Change Password
         {#if active}
           <div class="spinner" />
