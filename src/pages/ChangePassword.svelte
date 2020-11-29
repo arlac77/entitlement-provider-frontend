@@ -19,7 +19,10 @@
 
       const response = await fetch(`${api}/password`, {
         method: "PATCH",
-        headers: session.authorizationHeader,
+        headers: {
+          "Content-Type": "application/json",
+          ...session.authorizationHeader
+        },
         body: JSON.stringify({
           user: username,
           password,
@@ -27,7 +30,7 @@
         })
       });
 
-      if(!response.ok) {
+      if (!response.ok) {
         message = response.statusText;
       }
     } catch (e) {
