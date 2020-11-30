@@ -11,5 +11,7 @@
   <Login
     {session}
     endpoint={api + '/authenticate'}
-    result={() => router.continue('/')} />
+    result={() => router.continue('/')}>
+    <div slot="footer"><a href="new_user">create account</a></div>
+  </Login>
 </Modal>
