@@ -71,7 +71,7 @@
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
-      "entitlement-provider": ">=2.3.92",
+      "entitlement-provider": ">=2.9.1",
       "nginx-mainline": ">=1.19.3"
     },
     "groups": "services",
