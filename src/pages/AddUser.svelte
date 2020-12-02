@@ -49,7 +49,6 @@ Hallo XXXX
     </slot>
   {/if}
 
-  <slot name="inputs">
     <label for="username">
       Username
       <input
@@ -85,9 +84,7 @@ Hallo XXXX
         disabled={active}
         bind:value={password} />
     </label>
-  </slot>
 
-  <slot name="submit">
     <button
       id="submit"
       type="submit"
@@ -97,6 +94,5 @@ Hallo XXXX
         <div class="spinner" />
       {/if}
     </button>
-  </slot>
 </form>
 -->

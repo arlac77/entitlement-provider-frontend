@@ -1,5 +1,7 @@
 <script>
   import { Login } from "svelte-session-manager";
+  import { Link } from "svelte-guard-history-router";
+
   import { Modal } from "svelte-common";
   import { session } from "../session.mjs";
   import api from "consts:api";
@@ -12,6 +14,8 @@
     {session}
     endpoint={api + '/authenticate'}
     result={() => router.continue('/')}>
-    <div slot="footer"><a href="new_user">create account</a></div>
+    <div slot="footer">
+      <Link href="/user/add">create account</Link>
+    </div>
   </Login>
 </Modal>

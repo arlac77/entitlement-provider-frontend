@@ -12,7 +12,7 @@
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
   import ChangePassword from "./pages/ChangePassword.svelte";
-  import NewUser from "./pages/NewUser.svelte";
+  import AddUser from "./pages/AddUser.svelte";
   import Home from "./pages/Home.svelte";
   import UserRoutes from "./UserRoutes.svelte";
   import EntitlementRoutes from "./EntitlementRoutes.svelte";
@@ -35,12 +35,12 @@
         <EntitlementRoutes {guard} {session}>Entitlements</EntitlementRoutes>
       </li>
       <li>
-        <Route href="/newUser" component={NewUser}>
-          New User
+        <Route href="/user/add" component={AddUser}>
+          Add User
         </Route>
       </li>
       <li>
-        <Route path="/change-password" component={ChangePassword}>
+        <Route path="/user/password" component={ChangePassword}>
           Change Password
         </Route>
       </li>
