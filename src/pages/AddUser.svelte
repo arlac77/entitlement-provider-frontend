@@ -81,7 +81,7 @@
       bind:value={password} />
   </label>
 
-  <button id="submit" type="submit" disabled={!password || !username}>
+  <button type="submit" disabled={!password || !username}>
     Add User
     {#if active}
       <div class="spinner" />

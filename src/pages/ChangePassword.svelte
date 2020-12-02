@@ -121,7 +121,6 @@
     </label>
 
     <button
-      id="submit"
       type="submit"
       disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
       Change Password
