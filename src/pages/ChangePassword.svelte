@@ -17,7 +17,7 @@
     try {
       active = true;
 
-      const response = await fetch(`${api}/password`, {
+      const response = await fetch(`${api}/user/password`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
