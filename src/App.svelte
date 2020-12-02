@@ -35,7 +35,7 @@
         <EntitlementRoutes {guard} {session}>Entitlements</EntitlementRoutes>
       </li>
       <li>
-        <Route href="/user/add" component={AddUser}>
+        <Route path="/user/add" component={AddUser}>
           Add User
         </Route>
       </li>
