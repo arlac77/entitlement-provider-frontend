@@ -45,7 +45,7 @@
         </Route>
       </li>
       <li>
-        <Route path="/services" guards={guard} component={Services}>
+        <Route path="/services" {guard} component={Services}>
           Services
         </Route>
       </li>
