@@ -21,7 +21,7 @@
     "start": "rollup -c -w rollup.config.mjs"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^1.2.4",
+    "@kronos-integration/svelte-components": "^1.2.5",
     "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^3.0.3",
     "svelte-entitlement": "^1.1.1",
@@ -36,7 +36,7 @@
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/release-notes-generator": "^9.0.1",
-    "npm-pkgbuild": "^6.12.13",
+    "npm-pkgbuild": "^6.12.16",
     "postcss-import": "12.0.1",
     "rollup": "^2.34.1",
     "rollup-plugin-consts": "^1.0.2",
