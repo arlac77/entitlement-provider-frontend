@@ -8,10 +8,13 @@
 
 <h1>{user.cn}</h1>
 
-<ul>
+<table>
   {#each Object.entries(user) as kv}
-    <li>{kv[0]} : {kv[1]}</li>
+    <tr>
+      <td>{kv[0]}</td>
+      <td>{kv[1]}</td>
+    </tr>
   {/each}
-</ul>
+</table>
 
 <ObjectLink object={user} suffix="/entitlements">Entitlements</ObjectLink>
