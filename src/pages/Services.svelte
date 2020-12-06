@@ -11,10 +11,15 @@
   const protocols = ["access_token", session.access_token];
 
   let data = websocketStore(api_ws + "/admin/services", {}, protocols);
+  let requests = websocketStore(api_ws + "/admin/requests", {}, protocols);
 
   let services = {};
 
   $: services = Services.initialize($data);
+
+  $: {
+    console.log($requests);
+  }
 </script>
 
 {#await services}
