@@ -21,7 +21,7 @@
     "start": "rollup -c -w rollup.config.mjs"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^1.2.7",
+    "@kronos-integration/svelte-components": "^1.2.8",
     "mf-styling": "arlac77/mf-styling",
     "svelte-common": "^3.0.3",
     "svelte-entitlement": "^1.1.1",
@@ -71,7 +71,7 @@
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
-      "entitlement-provider": ">=2.9.1",
+      "entitlement-provider": ">=2.9.11",
       "nginx-mainline": ">=1.19.3"
     },
     "groups": "services",
