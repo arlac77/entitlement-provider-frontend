@@ -16,14 +16,10 @@
   let services = {};
 
   $: services = Services.initialize($data);
-
-  $: {
-    console.log($requests);
-  }
 </script>
 
 {#await services}
   <p>...waiting</p>
 {:then services}
-  <ServiceCanvas {services} />
+  <ServiceCanvas {requests} {services} />
 {/await}
