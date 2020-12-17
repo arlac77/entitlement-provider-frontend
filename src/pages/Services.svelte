@@ -1,6 +1,6 @@
 <script>
   import {
-    Services,
+    ServiceProvider,
     ServiceCanvas
   } from "@kronos-integration/svelte-components";
   import { websocketStore } from "svelte-websocket-store";
@@ -15,11 +15,15 @@
 
   let services = {};
 
-  $: services = Services.initialize($data);
+  $: {
+    services = ServiceProvider.initialize($data);
+
+    
+  }
 </script>
 
 {#await services}
   <p>...waiting</p>
 {:then services}
-  <ServiceCanvas {requests} {services} />
+  <ServiceCanvas {services} />
 {/await}
