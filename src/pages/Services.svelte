@@ -12,16 +12,7 @@
 
   let data = websocketStore(api_ws + "/admin/services", {}, protocols);
   let requests = websocketStore(api_ws + "/admin/requests", {}, protocols);
-
-  let services = {};
-
-  $: {
-    services = ServiceProvider.initialize($data, requests);
-  }
+  let services = new ServiceProvider(data, requests);
 </script>
 
-{#await services}
-  <p>...waiting</p>
-{:then services}
-  <ServiceCanvas {services} />
-{/await}
+<ServiceCanvas {services} />
