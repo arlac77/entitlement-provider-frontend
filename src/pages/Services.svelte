@@ -8,10 +8,10 @@
   import api_ws from "consts:api_ws";
 
   const protocols = ["access_token", session.access_token];
-
-  let data = websocketStore(api_ws + "/admin/services", {}, protocols);
-  let requests = websocketStore(api_ws + "/admin/requests", {}, protocols);
-  let services = new ServiceProvider(data, requests);
+  const services = new ServiceProvider(
+    websocketStore(api_ws + "/admin/services", {}, protocols),
+    websocketStore(api_ws + "/admin/requests", {}, protocols)
+  );
 </script>
 
 <ServiceCanvas {services} />
