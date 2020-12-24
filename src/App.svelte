@@ -24,7 +24,7 @@
 <Router {base}>
   <TopNav offset={42}>
     <Route href="/" path="*" component={Home}>
-      <img class="logo" src="images/logo.svg" alt="Entitlement Provider" />
+      <img class="logo" src="images/icon.svg" alt="Entitlement Provider" />
       Entitlements
     </Route>
     <ul class="left">
