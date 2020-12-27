@@ -1,4 +1,4 @@
-import livereload from 'rollup-plugin-livereload';
+import livereload from "rollup-plugin-livereload";
 import { readFileSync } from "fs";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -67,7 +67,9 @@ export default [
         plugins: [postcssImport]
       }),
       svelte({
-        dev: !production
+        compilerOptions: {
+          dev: !production
+        }
       }),
       ...resolverPlugins,
       !production &&
@@ -90,7 +92,7 @@ export default [
     input: "src/service-worker/main.mjs",
     output: {
       ...output,
-      file: `${bundlePrefix}service-worker.mjs`,
+      file: `${bundlePrefix}service-worker.mjs`
     },
     plugins: [...prePlugins, ...resolverPlugins],
     external
