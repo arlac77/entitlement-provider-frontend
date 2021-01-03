@@ -1,5 +1,5 @@
 <script>
-  import { ActionButton } from "svelte-common";
+  import { ActionButton, FetchAction } from "svelte-common";
   import api from "consts:api";
   export let router;
 
@@ -9,43 +9,27 @@
   let username = "";
   let password = "";
 
+  const action = new FetchAction(`${api}/user`, () => {
+    return {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        user: username,
+        password
+      })
+    };
+  });
+
   let active = false;
-  let message;
 
-  async function addUser() {
-    try {
-      active = true;
-
-      const response = await fetch(`${api}/user`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          user: username,
-          password
-        })
-      });
-
-      if (!response.ok) {
-        message = response.statusText;
-      }
-    } catch (e) {
-      message = e;
-    } finally {
-      active = false;
-      password = "";
-    }
+  $: {
+    active = $action.active;
   }
 </script>
 
-<form on:submit|preventDefault={addUser}>
-  {#if message}
-    <slot name="message">
-      <div class="error" id="message">{message}</div>
-    </slot>
-  {/if}
-
+<form>
   <label for="username">
     Username
     <input
@@ -83,7 +67,7 @@
   </label>
 
   <ActionButton
-    action={addUser}
+    {action}
     shortcuts="Command+A"
     disabled={!password || !username}>
     Add User

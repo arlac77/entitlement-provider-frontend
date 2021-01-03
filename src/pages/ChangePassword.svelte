@@ -1,5 +1,5 @@
 <script>
-  import { Modal, ActionButton } from "svelte-common";
+  import { Modal, ActionButton, FetchAction } from "svelte-common";
   import { session } from "../session.mjs";
   import api from "consts:api";
 
@@ -10,46 +10,30 @@
   let newPassword = "";
   let repeatedNewPassword = "";
 
+  const action = new FetchAction(`${api}/user/password`, () => {
+    return {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        ...session.authorizationHeader
+      },
+      body: JSON.stringify({
+        user: username,
+        password,
+        new_password: newPassword
+      })
+    };
+  });
+
   let active = false;
-  let message;
 
-  async function changePassword() {
-    try {
-      active = true;
-
-      const response = await fetch(`${api}/user/password`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          ...session.authorizationHeader
-        },
-        body: JSON.stringify({
-          user: username,
-          password,
-          new_password: newPassword
-        })
-      });
-
-      if (!response.ok) {
-        message = response.statusText;
-      }
-    } catch (e) {
-      message = e;
-    } finally {
-      active = false;
-      password = repeatedNewPassword = newPassword = "";
-    }
+  $: {
+    active = $action.active;
   }
 </script>
 
 <Modal close={() => router.abort('/')}>
   <form>
-    {#if message}
-      <slot name="message">
-        <div class="error" id="message">{message}</div>
-      </slot>
-    {/if}
-
     <label for="username">
       Username
       <input
@@ -120,7 +104,8 @@
         bind:value={repeatedNewPassword} />
     </label>
 
-    <ActionButton action={changePassword}
+    <ActionButton
+      {action}
       shortcuts="Enter"
       disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
       Change Password
