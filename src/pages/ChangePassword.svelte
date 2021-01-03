@@ -121,7 +121,7 @@
     </label>
 
     <ActionButton action={changePassword}
-      shortcuts="enter"
+      shortcuts="Enter"
       disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
       Change Password
     </ActionButton>
