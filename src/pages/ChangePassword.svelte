@@ -1,5 +1,5 @@
 <script>
-  import { Modal } from "svelte-common";
+  import { Modal, ActionButton } from "svelte-common";
   import { session } from "../session.mjs";
   import api from "consts:api";
 
@@ -13,7 +13,7 @@
   let active = false;
   let message;
 
-  async function submit() {
+  async function changePassword() {
     try {
       active = true;
 
@@ -43,7 +43,7 @@
 </script>
 
 <Modal close={() => router.abort('/')}>
-  <form on:submit|preventDefault={submit}>
+  <form>
     {#if message}
       <slot name="message">
         <div class="error" id="message">{message}</div>
@@ -120,13 +120,10 @@
         bind:value={repeatedNewPassword} />
     </label>
 
-    <button
-      type="submit"
+    <ActionButton action={changePassword}
+      shortcuts="enter"
       disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
       Change Password
-      {#if active}
-        <div class="spinner" />
-      {/if}
-    </button>
+    </ActionButton>
   </form>
 </Modal>

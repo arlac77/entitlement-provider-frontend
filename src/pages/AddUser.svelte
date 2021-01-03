@@ -1,4 +1,5 @@
 <script>
+  import { ActionButton } from "svelte-common";
   import api from "consts:api";
   export let router;
 
@@ -11,7 +12,7 @@
   let active = false;
   let message;
 
-  async function submit() {
+  async function addUser() {
     try {
       active = true;
 
@@ -38,7 +39,7 @@
   }
 </script>
 
-<form on:submit|preventDefault={submit}>
+<form on:submit|preventDefault={addUser}>
   {#if message}
     <slot name="message">
       <div class="error" id="message">{message}</div>
@@ -81,10 +82,10 @@
       bind:value={password} />
   </label>
 
-  <button type="submit" disabled={!password || !username}>
+  <ActionButton
+    action={addUser}
+    shortcuts="Command+A"
+    disabled={!password || !username}>
     Add User
-    {#if active}
-      <div class="spinner" />
-    {/if}
-  </button>
+  </ActionButton>
 </form>
