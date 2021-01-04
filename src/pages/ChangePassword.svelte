@@ -32,7 +32,7 @@
     }
   );
 
-  action.disabled =
+ $: action.disabled =
     !password ||
     !username ||
     !newPassword ||

@@ -9,24 +9,30 @@
   let username = "";
   let password = "";
 
-  const action = new FetchAction(`${api}/user`, () => {
-    return {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        user: username,
-        password
-      })
-    };
-  });
+  const action = new FetchAction(
+    `${api}/user`,
+    () => {
+      return {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          user: username,
+          password
+        })
+      };
+    },
+    { title: "Add User", shortcuts: "Command+A" }
+  );
 
   let active = false;
 
   $: {
     active = $action.active;
   }
+
+  $: action.disabled = !password || !username;
 </script>
 
 <form>
@@ -66,10 +72,5 @@
       bind:value={password} />
   </label>
 
-  <ActionButton
-    {action}
-    shortcuts="Command+A"
-    disabled={!password || !username}>
-    Add User
-  </ActionButton>
+  <ActionButton {action} />
 </form>
