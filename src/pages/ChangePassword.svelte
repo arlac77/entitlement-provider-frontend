@@ -10,20 +10,33 @@
   let newPassword = "";
   let repeatedNewPassword = "";
 
-  const action = new FetchAction(`${api}/user/password`, () => {
-    return {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        ...session.authorizationHeader
-      },
-      body: JSON.stringify({
-        user: username,
-        password,
-        new_password: newPassword
-      })
-    };
-  });
+  const action = new FetchAction(
+    `${api}/user/password`,
+    () => {
+      return {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          ...session.authorizationHeader
+        },
+        body: JSON.stringify({
+          user: username,
+          password,
+          new_password: newPassword
+        })
+      };
+    },
+    {
+      title: "Change Password",
+      shortcuts: "Enter"
+    }
+  );
+
+  action.disabled =
+    !password ||
+    !username ||
+    !newPassword ||
+    newPassword !== repeatedNewPassword;
 
   let active = false;
 
@@ -104,11 +117,6 @@
         bind:value={repeatedNewPassword} />
     </label>
 
-    <ActionButton
-      {action}
-      shortcuts="Enter"
-      disabled={!password || !username || !newPassword || newPassword !== repeatedNewPassword}>
-      Change Password
-    </ActionButton>
+    <ActionButton {action} />
   </form>
 </Modal>
