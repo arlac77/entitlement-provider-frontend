@@ -1,5 +1,6 @@
 <script>
-  import { Modal, ActionButton, FetchAction } from "svelte-common";
+  import { Modal } from "svelte-common";
+  import { CommandButton, FetchCommand } from "svelte-command";
   import { session } from "../session.mjs";
   import api from "consts:api";
 
@@ -10,7 +11,7 @@
   let newPassword = "";
   let repeatedNewPassword = "";
 
-  const action = new FetchAction(
+  const command = new FetchCommand(
     `${api}/user/password`,
     () => {
       return {
@@ -32,7 +33,7 @@
     }
   );
 
- $: action.disabled =
+ $: command.disabled =
     !password ||
     !username ||
     !newPassword ||
@@ -41,7 +42,7 @@
   let active = false;
 
   $: {
-    active = $action.active;
+    active = $command.active;
   }
 </script>
 
@@ -117,6 +118,6 @@
         bind:value={repeatedNewPassword} />
     </label>
 
-    <ActionButton {action} />
+    <CommandButton {command} />
   </form>
 </Modal>
