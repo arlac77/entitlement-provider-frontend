@@ -1,5 +1,5 @@
 <script>
-  import { ActionButton, FetchAction } from "svelte-common";
+  import { CommandButton, FetchCommand } from "svelte-command";
   import api from "consts:api";
   export let router;
 
@@ -9,7 +9,7 @@
   let username = "";
   let password = "";
 
-  const action = new FetchAction(
+  const command = new FetchCommand(
     `${api}/user`,
     () => {
       return {
@@ -29,10 +29,10 @@
   let active = false;
 
   $: {
-    active = $action.active;
+    active = $command.active;
   }
 
-  $: action.disabled = !password || !username;
+  $: command.disabled = !password || !username;
 </script>
 
 <form>
@@ -72,5 +72,5 @@
       bind:value={password} />
   </label>
 
-  <ActionButton {action} />
+  <CommandButton {command} />
 </form>
