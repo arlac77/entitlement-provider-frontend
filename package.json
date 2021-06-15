@@ -21,12 +21,12 @@
     "start": "rollup -c -w rollup.config.mjs"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^2.4.21",
+    "@kronos-integration/svelte-components": "^2.4.22",
     "mf-styling": "arlac77/mf-styling",
     "svelte-command": "^1.1.1",
-    "svelte-common": "^4.4.6",
+    "svelte-common": "^4.4.7",
     "svelte-entitlement": "^1.2.5",
-    "svelte-guard-history-router": "^4.2.8",
+    "svelte-guard-history-router": "^4.2.9",
     "svelte-session-manager": "^1.4.4",
     "svelte-websocket-store": "^1.1.5"
   },
