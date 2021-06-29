@@ -74,7 +74,7 @@
     },
     "depends": {
       "entitlement-provider": ">=2.9.57",
-      "nginx-mainline": ">=1.19.10"
+      "nginx-mainline": ">=1.21.0"
     },
     "groups": "services",
     "hooks": "pacman/hooks.sh",
