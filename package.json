@@ -70,8 +70,7 @@
       "${installdir}/": {
         "base": "public"
       },
-      "/etc/nginx/sites/common/${name}.conf": "pacman/nginx.conf",
-      "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf"
+      "/etc/nginx/sites/common/${name}.conf": "pacman/nginx.conf"
     },
     "depends": {
       "entitlement-provider": ">=2.9.69",
