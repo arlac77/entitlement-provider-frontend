@@ -28,7 +28,7 @@
     "svelte-entitlement": "^1.2.7",
     "svelte-guard-history-router": "^4.2.11",
     "svelte-session-manager": "^1.4.5",
-    "svelte-websocket-store": "^1.1.9"
+    "svelte-websocket-store": "^1.1.10"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.2",
