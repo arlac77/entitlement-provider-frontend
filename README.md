@@ -6,4 +6,3 @@
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/entitlement-provider-frontend.svg?style=flat-square)](https://github.com/arlac77/entitlement-provider-frontend/issues)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farlac77%2Fentitlement-provider-frontend%2Fbadge\&style=flat)](https://actions-badge.atrox.dev/arlac77/entitlement-provider-frontend/goto)
 [![Coverage Status](https://coveralls.io/repos/arlac77/entitlement-provider-frontend/badge.svg)](https://coveralls.io/github/arlac77/entitlement-provider-frontend)
-[![Tested with TestCafe](https://img.shields.io/badge/tested%20with-TestCafe-2fa4cf.svg)](https://github.com/DevExpress/testcafe)
