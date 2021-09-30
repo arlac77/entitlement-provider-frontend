@@ -13,9 +13,9 @@
     }
   ],
   "background_color": "#A21CAF",
-  "theme_color" : "#A21CAF",
   "categories": [
     "utilities",
     "security"
-  ]
-} 
+  ],
+  "theme_color": "#A21CAF"
+}
