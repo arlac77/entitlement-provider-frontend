@@ -1,4 +1,3 @@
-import livereload from "rollup-plugin-livereload";
 import { readFileSync } from "fs";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -74,13 +73,16 @@ export default [
       ...resolverPlugins,
       !production &&
         dev({
+          basePath: config.base,
           port,
           dirs: [dist],
-          spa: `${dist}/index.html`,
-          basePath: config.base,
-          proxy: {
-            [`${config.api}/*`]: [config.proxyTarget, { https: config.proxyTarget.startsWith("https:") }]
-          }
+          spa: true,
+          proxy: [
+            {
+              from: `${config.api}/*`,
+              to: config.proxyTarget
+            }
+          ]
         })
     ],
     external,
