@@ -36,41 +36,44 @@
 </script>
 
 <form>
-  <label for="username">
-    Username
-    <input
-      aria-label="username"
-      aria-required="true"
-      maxlength="75"
-      size="32"
-      autocorrect="off"
-      autocapitalize="off"
-      autocomplete="username"
-      id="username"
-      type="text"
-      placeholder="Username"
-      name="username"
-      required
-      disabled={active}
-      bind:value={username} />
-  </label>
-  <label for="current-password">
-    Password
-    <input
-      aria-label="current password"
-      aria-required="true"
-      size="32"
-      autocorrect="off"
-      autocapitalize="off"
-      autocomplete="current-password"
-      id="new-password"
-      type="password"
-      placeholder="Current Password"
-      name="password"
-      required
-      disabled={active}
-      bind:value={password} />
-  </label>
-
+  <fieldset>
+    <label for="username">
+      Username
+      <input
+        aria-label="username"
+        aria-required="true"
+        maxlength="75"
+        size="32"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="username"
+        id="username"
+        type="text"
+        placeholder="Username"
+        name="username"
+        required
+        disabled={active}
+        bind:value={username}
+      />
+    </label>
+    <label for="current-password">
+      Password
+      <input
+        aria-label="current password"
+        aria-required="true"
+        size="32"
+        autocorrect="off"
+        autocapitalize="off"
+        autocomplete="current-password"
+        id="new-password"
+        type="password"
+        placeholder="Current Password"
+        name="password"
+        required
+        disabled={active}
+        bind:value={password}
+      />
+    </label>
+  </fieldset>
   <CommandButton {command} />
 </form>
