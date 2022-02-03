@@ -65,19 +65,19 @@
     "proxyTarget": "https://mfelten.dynv6.net/",
     "title": "Entitlements"
   },
-  "pacman": {
+  "pkg": {
     "content": {
       "${installdir}/": {
         "base": "public"
       },
-      "/etc/nginx/sites/common/${name}.conf": "pacman/nginx.conf"
+      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
     "depends": {
       "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
     },
     "groups": "services",
-    "hooks": "pacman/hooks.sh",
+    "hooks": "pkg/hooks.sh",
     "installdir": "/services/entitlement-provider/frontend"
   },
   "release": {
@@ -87,7 +87,7 @@
       [
         "@semantic-release/exec",
         {
-          "publishCmd": "npx npm-pkgbuild --pkgver ${nextRelease.version} pkgbuild pacman makepkg"
+          "publishCmd": "npx npm-pkgbuild "
         }
       ],
       "@semantic-release/npm",
