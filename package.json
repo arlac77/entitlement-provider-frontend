@@ -24,8 +24,8 @@
     "@kronos-integration/svelte-components": "^2.4.64",
     "mf-styling": "arlac77/mf-styling",
     "svelte-command": "^1.1.7",
-    "svelte-common": "^4.4.27",
-    "svelte-entitlement": "^1.2.16",
+    "svelte-common": "^4.4.28",
+    "svelte-entitlement": "^1.2.17",
     "svelte-guard-history-router": "^4.6.0",
     "svelte-session-manager": "^2.0.10",
     "svelte-websocket-store": "^1.1.20"
