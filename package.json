@@ -23,8 +23,8 @@
   "dependencies": {
     "@kronos-integration/svelte-components": "^2.4.65",
     "mf-styling": "arlac77/mf-styling",
-    "svelte-command": "^1.1.7",
-    "svelte-common": "^4.4.29",
+    "svelte-command": "^1.1.8",
+    "svelte-common": "^4.4.30",
     "svelte-entitlement": "^1.2.18",
     "svelte-guard-history-router": "^4.6.0",
     "svelte-session-manager": "^2.0.10",
