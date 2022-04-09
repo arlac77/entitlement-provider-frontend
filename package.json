@@ -67,7 +67,7 @@
   },
   "pkg": {
     "content": {
-      "${installdir}/": {
+      "${installdir}": {
         "base": "public"
       },
       "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
@@ -78,7 +78,7 @@
       "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
     },
-    "installdir": "/services/entitlement-provider/frontend"
+    "installdir": "/services/entitlement-provider/frontend/"
   },
   "release": {
     "plugins": [
