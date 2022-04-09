@@ -50,6 +50,9 @@
     "semantic-release": "^19.0.2",
     "svelte": "^3.46.6"
   },
+  "optionalDependencies": {
+    "mf-hosting": "github:arlac77/mf-hosting"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/arlac77/entitlement-provider-frontend.git"
