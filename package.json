@@ -73,7 +73,10 @@
       "${installdir}": {
         "base": "public"
       },
-      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
+      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf",
+      "${installdir}/": {
+        "base": "public/"
+      }
     },
     "hooks": "pkg/hooks.sh",
     "groups": "services",
@@ -106,6 +109,7 @@
   "template": {
     "inheritFrom": [
       "arlac77/template-arlac77-github",
+      "arlac77/template-nginx",
       "arlac77/template-svelte-app"
     ]
   }
