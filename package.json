@@ -73,10 +73,9 @@
       "${install.dir}": {
         "base": "public"
       },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
-    "groups": "services",
     "depends": {
       "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
