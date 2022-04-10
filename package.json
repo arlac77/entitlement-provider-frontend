@@ -81,7 +81,7 @@
       "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
     },
-    "install.dir": "/services/entitlement-provider/frontend/"
+    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
   },
   "release": {
     "plugins": [
