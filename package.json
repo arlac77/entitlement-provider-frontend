@@ -39,7 +39,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^9.0.4",
+    "npm-pkgbuild": "^10.0.0",
     "postcss": "^8.4.12",
     "postcss-import": "^14.1.0",
     "rollup": "^2.70.2",
@@ -72,20 +72,19 @@
     "proxyTarget": "https://mfelten.dynv6.net/",
     "title": "Entitlements"
   },
-  "pkgbuild": {
-    "content": {
-      "${install.dir}": {
-        "base": "public"
-      },
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
-    },
+  "pkg": {
     "hooks": "pkg/hooks.sh",
-    "groups": "web",
+    "content": {
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${install.dir}": {
+        "base": "public/"
+      }
+    },
     "depends": {
-      "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
     },
-    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
+    "groups": "web",
+    "install.dir": "/services/entitlement-provider-frontend/frontend/"
   },
   "release": {
     "plugins": [
@@ -107,5 +106,20 @@
       "arlac77/template-nginx",
       "arlac77/template-svelte-app"
     ]
+  },
+  "pkgbuild": {
+    "content": {
+      "${install.dir}": {
+        "base": "public"
+      },
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+    },
+    "hooks": "pkg/hooks.sh",
+    "groups": "web",
+    "depends": {
+      "entitlement-provider": ">=2.9.69",
+      "nginx-mainline": ">=1.21.4"
+    },
+    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
   }
 }
