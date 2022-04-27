@@ -72,7 +72,7 @@
     "proxyTarget": "https://mfelten.dynv6.net/",
     "title": "Entitlements"
   },
-  "pkg": {
+  "pkgbuild": {
     "content": {
       "${install.dir}": {
         "base": "public"
