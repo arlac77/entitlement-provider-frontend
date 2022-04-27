@@ -72,7 +72,7 @@
     "proxyTarget": "https://mfelten.dynv6.net/",
     "title": "Entitlements"
   },
-  "pkg": {
+  "pkgbuild": {
     "hooks": "pkg/hooks.sh",
     "content": {
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
