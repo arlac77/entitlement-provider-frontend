@@ -72,20 +72,6 @@
     "proxyTarget": "https://mfelten.dynv6.net/",
     "title": "Entitlements"
   },
-  "pkgbuild": {
-    "hooks": "pkg/hooks.sh",
-    "content": {
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-      "${install.dir}": {
-        "base": "public/"
-      }
-    },
-    "depends": {
-      "nginx-mainline": ">=1.21.4"
-    },
-    "groups": "web",
-    "install.dir": "/services/entitlement-provider-frontend/frontend/"
-  },
   "release": {
     "plugins": [
       [
@@ -110,7 +96,7 @@
   "pkgbuild": {
     "content": {
       "${install.dir}": {
-        "base": "public"
+        "base": "public/"
       },
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
@@ -120,6 +106,6 @@
       "entitlement-provider": ">=2.9.69",
       "nginx-mainline": ">=1.21.4"
     },
-    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
+    "install.dir": "/services/entitlement-provider-frontend/frontend/"
   }
 }
