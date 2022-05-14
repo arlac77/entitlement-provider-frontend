@@ -10,5 +10,4 @@ rollup.config.*
 .github
 *.map
 pkg
-jsconfig.json
 .stylelintrc.json
