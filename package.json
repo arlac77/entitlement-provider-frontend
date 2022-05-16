@@ -55,7 +55,7 @@
     "svelte": "^3.48.0"
   },
   "optionalDependencies": {
-    "mf-hosting": "github:arlac77/mf-hosting"
+    "mf-hosting": "^1.2.1"
   },
   "repository": {
     "type": "git",
@@ -82,8 +82,7 @@
     "hooks": "pkg/hooks.sh",
     "groups": "web",
     "depends": {
-      "entitlement-provider": ">=2.9.69",
-      "nginx-mainline": ">=1.21.4"
+      "entitlement-provider": ">=2.9.121"
     },
     "install.dir": "${install.base.dir}entitlement-provider/frontend/"
   },
