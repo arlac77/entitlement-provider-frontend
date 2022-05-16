@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@kronos-integration/svelte-components": "^2.4.74",
-    "mf-styling": "^1.2.11",
+    "mf-styling": "^1.2.13",
     "svelte-command": "^1.1.9",
     "svelte-common": "^4.4.33",
     "svelte-entitlement": "^1.2.19",
@@ -55,7 +55,7 @@
     "svelte": "^3.48.0"
   },
   "optionalDependencies": {
-    "mf-hosting": "^1.2.1"
+    "mf-hosting": "^1.4.0"
   },
   "repository": {
     "type": "git",
