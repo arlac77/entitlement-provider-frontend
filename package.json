@@ -39,7 +39,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^10.7.3",
+    "npm-pkgbuild": "^10.7.6",
     "postcss": "^8.4.13",
     "postcss-import": "^14.1.0",
     "rollup": "^2.73.0",
@@ -82,7 +82,8 @@
     "hooks": "pkg/hooks.sh",
     "groups": "web",
     "depends": {
-      "entitlement-provider": ">=2.9.121"
+      "entitlement-provider": ">=2.9.121",
+      "nginx-mainline": ">=1.21.4"
     },
     "install.dir": "${install.base.dir}entitlement-provider/frontend/"
   },
