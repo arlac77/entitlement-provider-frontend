@@ -26,9 +26,9 @@
     "@kronos-integration/svelte-components": "^2.4.74",
     "mf-styling": "^1.2.18",
     "svelte-command": "^1.1.9",
-    "svelte-common": "^4.4.33",
+    "svelte-common": "^4.4.34",
     "svelte-entitlement": "^1.2.19",
-    "svelte-guard-history-router": "^4.6.8",
+    "svelte-guard-history-router": "^4.6.9",
     "svelte-session-manager": "^2.0.10",
     "svelte-websocket-store": "^1.1.24"
   },
