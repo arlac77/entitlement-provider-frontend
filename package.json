@@ -27,7 +27,7 @@
     "mf-styling": "^1.2.21",
     "svelte-command": "^1.1.11",
     "svelte-common": "^4.4.37",
-    "svelte-entitlement": "^1.2.20",
+    "svelte-entitlement": "^1.2.21",
     "svelte-guard-history-router": "^4.6.12",
     "svelte-session-manager": "^2.0.10",
     "svelte-websocket-store": "^1.1.27"
