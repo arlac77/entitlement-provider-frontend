@@ -23,14 +23,14 @@
     "lint:css": "stylelint ./src/*.css"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^2.4.76",
-    "mf-styling": "^1.2.20",
-    "svelte-command": "^1.1.10",
-    "svelte-common": "^4.4.36",
+    "@kronos-integration/svelte-components": "^2.4.77",
+    "mf-styling": "^1.2.21",
+    "svelte-command": "^1.1.11",
+    "svelte-common": "^4.4.37",
     "svelte-entitlement": "^1.2.20",
-    "svelte-guard-history-router": "^4.6.11",
+    "svelte-guard-history-router": "^4.6.12",
     "svelte-session-manager": "^2.0.10",
-    "svelte-websocket-store": "^1.1.26"
+    "svelte-websocket-store": "^1.1.27"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
