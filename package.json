@@ -23,8 +23,8 @@
     "lint:css": "stylelint ./src/*.css"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^2.4.79",
-    "mf-styling": "^1.2.21",
+    "@kronos-integration/svelte-components": "^2.4.80",
+    "mf-styling": "^1.2.22",
     "svelte-command": "^1.1.12",
     "svelte-common": "^4.4.38",
     "svelte-entitlement": "^1.2.22",
