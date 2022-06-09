@@ -28,7 +28,7 @@
     "svelte-command": "^1.1.12",
     "svelte-common": "^4.4.40",
     "svelte-entitlement": "^1.2.22",
-    "svelte-guard-history-router": "^4.6.12",
+    "svelte-guard-history-router": "^4.6.14",
     "svelte-session-manager": "^2.0.10",
     "svelte-websocket-store": "^1.1.29"
   },
