@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "@kronos-integration/svelte-components": "^2.4.85",
-    "mf-styling": "^1.2.24",
-    "svelte-command": "^1.1.17",
+    "mf-styling": "^1.2.25",
+    "svelte-command": "^1.1.18",
     "svelte-common": "^4.6.3",
     "svelte-entitlement": "^1.2.24",
-    "svelte-guard-history-router": "^4.6.17",
+    "svelte-guard-history-router": "^4.6.18",
     "svelte-session-manager": "^2.0.10",
     "svelte-websocket-store": "^1.1.30"
   },
