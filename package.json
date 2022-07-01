@@ -23,7 +23,7 @@
     "lint:css": "stylelint ./src/*.css"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^2.4.86",
+    "@kronos-integration/svelte-components": "^2.4.88",
     "mf-styling": "^1.2.25",
     "svelte-command": "^1.1.18",
     "svelte-common": "^4.6.3",
@@ -39,7 +39,7 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "npm-pkgbuild": "^10.7.6",
+    "npm-pkgbuild": "^10.10.0",
     "postcss": "^8.4.13",
     "postcss-import": "^14.1.0",
     "rollup": "^2.73.0",
