@@ -78,7 +78,6 @@
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
-    "groups": "web",
     "depends": {
       "entitlement-provider": ">=2.9.121"
     },
