@@ -26,8 +26,8 @@
     "@kronos-integration/svelte-components": "^2.4.93",
     "mf-styling": "^1.7.23",
     "svelte-command": "^1.1.24",
-    "svelte-common": "^4.19.14",
-    "svelte-entitlement": "^1.2.36",
+    "svelte-common": "^4.19.15",
+    "svelte-entitlement": "^1.2.37",
     "svelte-guard-history-router": "^5.5.5",
     "svelte-session-manager": "^2.0.11",
     "svelte-websocket-store": "^1.1.33"
@@ -55,7 +55,7 @@
     "svelte": "^3.48.0"
   },
   "optionalDependencies": {
-    "mf-hosting": "^1.7.8"
+    "mf-hosting": "^1.7.9"
   },
   "repository": {
     "type": "git",
