@@ -47,7 +47,7 @@
     "vite": "^4.0.0"
   },
   "optionalDependencies": {
-    "mf-hosting": "^1.7.9"
+    "mf-hosting": "^1.8.0"
   },
   "repository": {
     "type": "git",
@@ -57,13 +57,6 @@
     "url": "https://github.com/arlac77/entitlement-provider-frontend/issues"
   },
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
-  "config": {
-    "api": "/services/entitlements/api",
-    "api_ws": "wss://mfelten.dynv6.net/services/entitlements/api",
-    "base": "/services/entitlements",
-    "proxyTarget": "https://mfelten.dynv6.net/",
-    "title": "Entitlements"
-  },
   "pkgbuild": {
     "content": {
       "${install.dir}": "build/",
@@ -73,7 +66,9 @@
     "depends": {
       "entitlement-provider": ">=2.9.121"
     },
-    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
+    "install.dir": "${install.base.dir}entitlement-provider/frontend/",
+    "title": "Entitlements",
+    "http.path": "${http.base.path}/entitlements"
   },
   "release": {
     "plugins": [

@@ -15,8 +15,8 @@ export default defineConfig(async ({ command, mode }) => {
   process.env["VITE_NAME"] = properties.name;
   process.env["VITE_DESCRIPTION"] = properties.description;
   process.env["VITE_VERSION"] = properties.version;
-  process.env["VITE_API"] = properties.api;
-  process.env["VITE_API_WS"] = properties.api_ws;
+  process.env["VITE_API"] = properties["http.api.path"];
+  process.env["VITE_API_WS"] = properties["wss.api"];
 
   const open = process.env.CI ? {} : { open: base };
 
