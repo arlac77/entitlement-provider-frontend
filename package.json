@@ -66,9 +66,9 @@
     "depends": {
       "entitlement-provider": ">=2.9.121"
     },
+    "http.path": "${http.base.path}/entitlements",
     "install.dir": "${install.base.dir}entitlement-provider/frontend/",
-    "title": "Entitlements",
-    "http.path": "${http.base.path}/entitlements"
+    "title": "Entitlements"
   },
   "release": {
     "plugins": [
