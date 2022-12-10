@@ -1,5 +1,4 @@
 <script>
-  import { base } from "../constants.mjs";
   import {
     Router,
     Route,
@@ -7,6 +6,7 @@
     redirectGuard
   } from "svelte-guard-history-router";
   import { Menue, TopNav } from "svelte-common";
+  import { base } from "./constants.mjs";
   import { session } from "./session.mjs";
   import About from "./pages/About.svelte";
   import Login from "./pages/Login.svelte";
