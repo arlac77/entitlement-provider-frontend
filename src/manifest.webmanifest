@@ -15,7 +15,8 @@
   "background_color": "#A21CAF",
   "categories": [
     "utilities",
-    "security"
+    "security",
+    "examples"
   ],
   "theme_color": "#A21CAF"
 }
