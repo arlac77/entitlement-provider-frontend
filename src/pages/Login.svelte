@@ -1,10 +1,9 @@
 <script>
   import { Login } from "svelte-session-manager";
   import { Link } from "svelte-guard-history-router";
-
   import { Modal } from "svelte-common";
   import { session } from "../session.mjs";
-  import api from "consts:api";
+  import { api } from "../constants.mjs";
 
   export let router;
 </script>

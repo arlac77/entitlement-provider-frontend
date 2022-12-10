@@ -1,6 +1,5 @@
 <script>
-  import * as style from "./main.css";
-  import base from "consts:base";
+  import { base } from "../constants.mjs";
   import {
     Router,
     Route,
@@ -24,7 +23,13 @@
 <Router {base}>
   <TopNav offset={42}>
     <Route href="/" path="*" component={Home}>
-      <img class="logo" src="images/icon.svg" alt="Entitlement Provider" width="32" height="32"/>
+      <img
+        class="logo"
+        src="images/icon.svg"
+        alt="Entitlement Provider"
+        width="32"
+        height="32"
+      />
       Entitlements
     </Route>
     <ul class="left">
@@ -35,9 +40,7 @@
         <EntitlementRoutes {guard} {session}>Entitlements</EntitlementRoutes>
       </li>
       <li>
-        <Route path="/user/add" component={AddUser}>
-          Add User
-        </Route>
+        <Route path="/user/add" component={AddUser}>Add User</Route>
       </li>
       <li>
         <Route path="/user/password" component={ChangePassword}>
@@ -45,9 +48,7 @@
         </Route>
       </li>
       <li>
-        <Route path="/services" {guard} component={Services}>
-          Services
-        </Route>
+        <Route path="/services" {guard} component={Services}>Services</Route>
       </li>
     </ul>
     <ul>
@@ -59,7 +60,8 @@
               <a
                 href="/"
                 class="dropdown-item"
-                on:click|preventDefault={() => session.invalidate()}>
+                on:click|preventDefault={() => session.invalidate()}
+              >
                 Logout
                 {$session.username}
               </a>

@@ -2,7 +2,7 @@
   import { Modal } from "svelte-common";
   import { CommandButton, FetchCommand } from "svelte-command";
   import { session } from "../session.mjs";
-  import api from "consts:api";
+  import { api } from "../constants.mjs";
 
   export let router;
 

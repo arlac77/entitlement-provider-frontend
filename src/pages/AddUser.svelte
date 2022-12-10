@@ -1,6 +1,6 @@
 <script>
   import { CommandButton, FetchCommand } from "svelte-command";
-  import api from "consts:api";
+  import { api } from "../constants.mjs";
   export let router;
 
   const route = router.route;
