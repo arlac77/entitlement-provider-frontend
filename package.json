@@ -62,7 +62,6 @@
       "${install.dir}": "build/",
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
     },
-    "hooks": "pkg/hooks.sh",
     "depends": {
       "entitlement-provider": ">=2.9.121"
     },
