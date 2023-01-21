@@ -60,15 +60,14 @@
   "pkgbuild": {
     "content": {
       "${install.dir}": "build/",
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}_well_known.conf": "pkg/nginx.conf"
     },
     "depends": {
       "entitlement-provider": ">=2.9.121"
     },
     "frontend": true,
     "http.path": "${http.base.path}/entitlements",
-    "install.dir": "${install.base.dir}entitlement-provider/frontend/",
-    "title": "Entitlements"
+    "install.dir": "${install.base.dir}entitlement-provider/frontend/"
   },
   "release": {
     "plugins": [
