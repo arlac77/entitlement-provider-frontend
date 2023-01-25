@@ -60,7 +60,7 @@
   "pkgbuild": {
     "content": {
       "${install.dir}": "build/",
-      "${nginx.sites.dir}${name}_well_known.conf": "pkg/nginx.conf"
+      "${nginx.sites.dir}${name}-well-known.conf": "pkg/nginx.conf"
     },
     "depends": {
       "entitlement-provider": ">=2.9.121"
