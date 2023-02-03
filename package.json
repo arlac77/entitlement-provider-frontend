@@ -28,7 +28,7 @@
     "@kronos-integration/svelte-components": "^2.4.93",
     "mf-styling": "^1.7.43",
     "svelte-command": "^1.1.37",
-    "svelte-common": "^4.22.3",
+    "svelte-common": "^4.22.4",
     "svelte-entitlement": "^1.2.48",
     "svelte-guard-history-router": "^5.5.28",
     "svelte-session-manager": "^2.0.11",
