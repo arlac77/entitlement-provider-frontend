@@ -19,8 +19,6 @@ export default defineConfig(async ({ command, mode }) => {
   process.env["VITE_API"] = properties["http.api.path"];
   process.env["VITE_API_WS"] = properties["wss.api"];
 
-  const open = process.env.CI ? {} : { open: base };
-
   return {
     base,
     root: "src",
@@ -32,7 +30,7 @@ export default defineConfig(async ({ command, mode }) => {
         }
       })
     ],
-    server: { host: true, ...open },
+    server: { host: true },
     build: {
       outDir: "../build",
       target: "safari16",
