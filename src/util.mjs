@@ -1,6 +1,6 @@
 import { api } from "./constants.mjs";
 
-export async function* fetchIterator(path, factory, session, transition) {
+export async function* fetchIterator(path, factory, session) {
   const response = await fetch(api + path, {
     headers: {
       ...session.authorizationHeader
