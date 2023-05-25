@@ -37,7 +37,7 @@
 
 <form>
   <fieldset>
-    <label for="username">
+    <label>
       Username
       <input
         aria-label="username"
@@ -56,7 +56,7 @@
         bind:value={username}
       />
     </label>
-    <label for="current-password">
+    <label>
       Password
       <input
         aria-label="current password"
