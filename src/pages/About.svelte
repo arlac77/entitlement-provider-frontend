@@ -10,7 +10,7 @@
   import { websocketStore } from "svelte-websocket-store";
   import { serviceWorker, serviceWorkerRegistration } from "../service-worker/registration.mjs";
   import { session } from "../session.mjs";
-  import { name, version, description, api_ws } from "../constants.mjs";
+  import { title, version, description, api_ws } from "../constants.mjs";
   const protocols = ["access_token", session.access_token];
 
   let uptime = websocketStore(api_ws + "/state/uptime", -1, protocols);
@@ -25,7 +25,7 @@
 </script>
 
 <About>
-  <ApplicationDetails {name} {version} {description} />
+  <ApplicationDetails name={title} {version} {description} />
   <ServerDetails {server} />
   <SessionDetails session={$session} />
   <ServiceWorkerDetails serviceWorker={$serviceWorker}  />

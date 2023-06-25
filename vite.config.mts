@@ -14,6 +14,7 @@ export default defineConfig(async ({ command, mode }) => {
   const production = mode === "production";
 
   process.env["VITE_NAME"] = properties.name;
+  process.env["VITE_TITLE"] = properties.title;
   process.env["VITE_DESCRIPTION"] = properties.description;
   process.env["VITE_VERSION"] = properties.version;
   process.env["VITE_API"] = properties["http.api.path"];
@@ -33,7 +34,6 @@ export default defineConfig(async ({ command, mode }) => {
     server: { host: true },
     build: {
       outDir: "../build",
-      target: "safari16",
       emptyOutDir: true,
       minify: production,
       sourcemap: true
