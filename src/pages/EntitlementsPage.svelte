@@ -3,8 +3,7 @@
 
   export let router;
 
-  const route = router.route;
-  const entitlements = $route.value;
+  const entitlements = router.value;
 </script>
 
 <EntitlementBadges {entitlements} />
