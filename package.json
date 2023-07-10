@@ -25,11 +25,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^2.5.2",
+    "@kronos-integration/svelte-components": "^2.5.3",
     "mf-styling": "^2.0.4",
     "svelte-command": "^1.1.44",
-    "svelte-common": "^6.2.4",
-    "svelte-entitlement": "^1.2.58",
+    "svelte-common": "^6.2.5",
+    "svelte-entitlement": "^1.2.59",
     "svelte-guard-history-router": "^5.5.40",
     "svelte-session-manager": "^2.2.10",
     "svelte-websocket-store": "^1.1.33"
