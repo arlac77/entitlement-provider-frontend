@@ -10,9 +10,9 @@
 @import "mf-styling/src/form.css";
 @import "mf-styling/src/card.css";
 
-@import "@kronos-integration/svelte-components/src/services.css";
-@import "svelte-common/src/common.css";
-@import "svelte-entitlement/src/entitlement.css";
+@import "@kronos-integration/svelte-components/css";
+@import "svelte-common/css";
+@import "svelte-entitlement/css";
 
 form {
   display: grid;
