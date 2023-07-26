@@ -114,7 +114,6 @@
           size="32"
           autocorrect="off"
           autocapitalize="off"
-          autocomplete="repeated-new-password"
           id="repeated-new-password"
           type="password"
           placeholder="New Password"
