@@ -31,7 +31,7 @@
     "mf-styling": "^3.1.7",
     "svelte-command": "^3.0.0",
     "svelte-common": "^6.11.0",
-    "svelte-entitlement": "^1.2.85",
+    "svelte-entitlement": "^2.0.0",
     "svelte-guard-history-router": "^6.1.2",
     "svelte-session-manager": "^2.2.22",
     "svelte-websocket-store": "^1.1.34"
