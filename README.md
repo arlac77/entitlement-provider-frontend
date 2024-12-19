@@ -1,6 +1,6 @@
 [![Svelte v5](https://img.shields.io/badge/svelte-v5-orange.svg)](https://svelte.dev)
 [![npm](https://img.shields.io/npm/v/entitlement-provider-frontend.svg)](https://www.npmjs.com/package/entitlement-provider-frontend)
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://spdx.org/licenses/0BSD.html)
 [![bundlejs](https://deno.bundlejs.com/?q=entitlement-provider-frontend\&badge=detailed)](https://bundlejs.com/?q=entitlement-provider-frontend)
 [![downloads](http://img.shields.io/npm/dm/entitlement-provider-frontend.svg?style=flat-square)](https://npmjs.org/package/entitlement-provider-frontend)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/entitlement-provider-frontend.svg?style=flat-square)](https://github.com/arlac77/entitlement-provider-frontend/issues)
