@@ -65,7 +65,7 @@
                 Logout
                 {$session.username}
               </a>
-              <div class="dropdown-divider" />
+              <div class="dropdown-divider"></div>
               <a href="#!" class="dropdown-item">three</a>
             </div>
           </Menue>
