@@ -83,7 +83,7 @@
       [
         "@semantic-release/exec",
         {
-          "publishCmd": "npx npm-pkgbuild --publish dist --verbose --staging build"
+          "publishCmd": "npx npm-pkgbuild --publish dist --verbose --staging /tmp/build"
         }
       ],
       [
