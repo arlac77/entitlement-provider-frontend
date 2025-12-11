@@ -63,7 +63,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install ksh
           sudo apt-get -y install makepkg
-          makepkg -h
           makepkg --version
           fi
       - name: release
@@ -76,8 +75,7 @@ jobs:
         continue-on-error: true
       - name: show output
         run: |
-          ls -al /tmp/build
-          cat /tmp/build/*.log
+          ls -alR /tmp/arch*
   finish:
     needs:
       - test-node
