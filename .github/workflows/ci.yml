@@ -41,7 +41,6 @@ jobs:
     needs:
       - test-node
     runs-on:
-      - linux
       - ubuntu-latest
     permissions:
       contents: write
@@ -63,8 +62,7 @@ jobs:
           then
           sudo apt-get update
           sudo apt-get install ksh curl
-          wget https://github.com/ThePoorPilot/pacman-utils/releases/download/5.2.2-3_2.31-0/pacman-utils_5.2.2-3_amd64.deb
-          sudo apt-get install -f ./pacman-utils_5.2.2-3_amd64.deb
+          sudo apt-get -y install makepkg
           fi
       - name: release
         run: npx semantic-release
