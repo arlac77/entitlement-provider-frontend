@@ -68,7 +68,7 @@
       "${nginx.sites.dir}${name}-well-known.conf": "pkg/nginx.conf"
     },
     "depends": {
-      "entitlement-provider": ">=2.10.13"
+      "entitlement-provider": ">=2.10.43"
     },
     "frontend": true,
     "http.path": "${http.base.path}/entitlements",
