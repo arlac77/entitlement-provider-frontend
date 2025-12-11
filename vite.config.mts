@@ -4,10 +4,13 @@ import { compression } from "vite-plugin-compression2";
 import { extractFromPackage } from "npm-pkgbuild";
 
 export default defineConfig(async ({ command, mode }) => {
-  const res = extractFromPackage({
-    dir: new URL("./", import.meta.url).pathname,
-    mode
-  }, process.env);
+  const res = extractFromPackage(
+    {
+      dir: new URL("./", import.meta.url).pathname,
+      mode
+    },
+    process.env
+  );
   const first = await res.next();
   const pkg = first.value;
   const properties = pkg.properties;
@@ -49,7 +52,6 @@ export default defineConfig(async ({ command, mode }) => {
         ],
         threshold: 500
       })
-
     ],
     server: { host: true },
     build: {
