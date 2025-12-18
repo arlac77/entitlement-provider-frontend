@@ -52,6 +52,7 @@
       <label for="username">
         Username
         <input
+          class="below"
           aria-label="username"
           aria-required="true"
           maxlength="75"
@@ -71,6 +72,7 @@
       <label for="current-password">
         Current Password
         <input
+          class="below"
           aria-label="current password"
           aria-required="true"
           size="32"
@@ -91,6 +93,7 @@
       <label for="new-password">
         New Password
         <input
+          class="below"
           aria-label="new password"
           aria-required="true"
           size="32"
@@ -109,6 +112,7 @@
       <label for="repeated-new-password">
         Repeat New Password
         <input
+          class="below"
           aria-label="repeated new password"
           aria-required="true"
           size="32"

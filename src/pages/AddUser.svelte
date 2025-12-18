@@ -40,6 +40,7 @@
     <label>
       Username
       <input
+        class="below"
         aria-label="username"
         aria-required="true"
         maxlength="75"
@@ -59,6 +60,7 @@
     <label>
       Password
       <input
+        class="below"
         aria-label="current password"
         aria-required="true"
         size="32"
