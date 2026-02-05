@@ -64,15 +64,15 @@
   "homepage": "https://github.com/arlac77/entitlement-provider-frontend#readme",
   "pkgbuild": {
     "content": {
-      "${install.dir}": "build/",
-      "${nginx.sites.dir}${name}-well-known.conf": "pkg/nginx.conf"
+      "${install_dir}": "build/",
+      "${nginx_sites_dir}${name}-well-known.conf": "pkg/nginx.conf"
     },
     "depends": {
       "entitlement-provider": ">=2.10.43"
     },
     "frontend": true,
-    "http.path": "${http.base.path}/entitlements",
-    "install.dir": "${install.base.dir}entitlement-provider/frontend/",
+    "http_path": "${http_base_path}/entitlements",
+    "install_dir": "${install_base_dir}entitlement-provider/frontend/",
     "title": "Entitlement Provider"
   },
   "release": {
