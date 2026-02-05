@@ -28,13 +28,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^4.0.25",
+    "@kronos-integration/svelte-components": "^4.0.26",
     "mf-styling": "^3.3.2",
     "svelte-command": "^3.0.54",
-    "svelte-common": "^6.19.66",
+    "svelte-common": "^6.19.67",
     "svelte-entitlement": "^2.0.63",
-    "svelte-guard-history-router": "^7.0.11",
-    "svelte-session-manager": "^3.0.77",
+    "svelte-guard-history-router": "^7.0.12",
+    "svelte-session-manager": "^3.0.78",
     "svelte-websocket-store": "^1.2.5"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "vite-plugin-compression2": "^2.4.0"
   },
   "optionalDependencies": {
-    "mf-hosting-frontend": "^3.9.12"
+    "mf-hosting-frontend": "^4.0.0"
   },
   "repository": {
     "type": "git",
