@@ -28,10 +28,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^4.0.33",
+    "@kronos-integration/svelte-components": "^4.0.34",
     "mf-styling": "^3.3.8",
     "svelte-command": "^3.0.57",
-    "svelte-common": "^6.19.71",
+    "svelte-common": "^6.19.72",
     "svelte-entitlement": "^2.0.66",
     "svelte-guard-history-router": "^7.0.15",
     "svelte-session-manager": "^3.0.81",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/exec": "^7.1.0",
-    "@semantic-release/github": "^12.0.5",
+    "@semantic-release/github": "^12.0.6",
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "npm-pkgbuild": "^20.6.2",
