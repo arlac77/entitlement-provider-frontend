@@ -28,7 +28,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kronos-integration/svelte-components": "^4.0.75",
+    "@kronos-integration/svelte-components": "^4.0.76",
     "mf-styling": "^3.3.30",
     "svelte-command": "^3.0.67",
     "svelte-common": "^6.19.80",
